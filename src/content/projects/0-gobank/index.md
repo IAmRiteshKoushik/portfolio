@@ -1,8 +1,8 @@
 ---
-title: "Reverse Proxy Web-Server in C"
-description: "Portfolio and blog build with astro."
-date: "Mar 18 2024"
+title: "Go Bank"
+description: "Simple banking API written in Go, PostgreSQL"
+date: "June 20 2024"
 demoURL: ""
-repoURL: "https://github.com/markhorn-dev/astro-sphere"
+repoURL: "https://github.com/IAmRiteshKoushik/go-bank"
 ---
 
