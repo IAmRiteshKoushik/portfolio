@@ -1,4 +1,4 @@
----
+# ---
 title: "Mar 11 : Blazingly Fast Bounties at Winter of Code!"
 description: "Cloudflare is severely underrated. Period."
 date: "Mar 11 2025"
@@ -128,10 +128,10 @@ the following events :
 "issue.reopened"
 "issue.issue_comment" // For capturing "/bounty <amount> @username"
 "pull_request.labeled" // For marking PR with "AMWOC-accepted" tag
-"pull_request.labeled" // For removing PR's "AMWOC-accepted" tag
+"pull_request.unlabelled" // For removing PR's "AMWOC-accepted" tag
 ```
 
-Here, we made use of the above created `Hookes` record-map in TypeScript to
+Here, we made use of the above created `Hooks` record-map in TypeScript to
 map the maintainers who are allowed access to each repos' actions such as
 marking an issue as completed, assigning issues and dispatching bounties.
 
