@@ -15,7 +15,7 @@ export const HOME: Metadata = {
 
 export const BLOG: Metadata = {
   TITLE: "Blog",
-  DESCRIPTION: "A collection of articles on topics I am passionate about.",
+  DESCRIPTION: "A collection of articles on topics I am passionate about. Software development, philosophy and simple observations about life.",
 };
 
 export const WORK: Metadata = {
