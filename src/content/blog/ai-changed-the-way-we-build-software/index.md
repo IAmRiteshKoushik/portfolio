@@ -235,7 +235,7 @@ asking the LLM to explain it line by line is quite helpful.
 are breaking into a new technology and need a simple and dirty config that 
 just works out of the box.
 
-## API Testing and Security AI
+## API Testing and Security with AI
 
 For testing your API using [Postman](https://www.postman.com/downloads/) or 
 [Bruno](https://www.usebruno.com/), you can pass in your API schema and 
