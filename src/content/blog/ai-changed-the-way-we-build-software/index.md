@@ -227,7 +227,7 @@ these configurations then generating a configuration file for the first time
 would mostly lead to an error or misbehaving configurations because you don't 
 exactly know what you want and how certain configs collide with each other.
 
-There is no general specific as configurations are specific to the tool. But 
+There is no general specification as configurations are specific to the tool. But 
 that being said, grabbing an existing config from an open-source codebase and 
 asking the LLM to explain it line by line is quite helpful.
 
