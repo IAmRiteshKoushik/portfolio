@@ -1,6 +1,6 @@
 ---
 title: "Terraforming the Software Development Landscape with AI"
-description: "Paradigm shifts and newer thinking models in an AI-first world"
+description: ""
 date: "August 17 2025"
 ---
 

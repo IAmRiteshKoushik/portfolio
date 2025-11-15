@@ -1,6 +1,6 @@
 ---
 title: "Achieving Fullfilment at Work"
-description: "Anecdotes on working deeply and finding fulfillment"
+description: ""
 date: "August 18 2025"
 ---
 

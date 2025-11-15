@@ -1,6 +1,6 @@
 ---
 title: "Learning Quickly and Deeply (with AI)"
-description: "Aim for learning, a project to build, and to systematically reflect on what you learn"
+description: ""
 date: "August 03 2025"
 ---
 

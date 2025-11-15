@@ -1,6 +1,6 @@
 ---
 title: "How to Setup Google Fonts in Electron Apps"
-description: "Google Fonts, React and Electron Vite"
+description: ""
 date: "November 08 2025"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Blazingly Fast Bounties at Winter of Code!"
-description: "Cloudflare is severely underrated. Period."
+description: ""
 date: "Mar 11 2025"
 ---
 
