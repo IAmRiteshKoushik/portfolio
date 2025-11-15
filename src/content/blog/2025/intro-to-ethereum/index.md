@@ -159,7 +159,7 @@ of newly created accounts by being an offset.
 ## What is balance ?
 
 It is the amount of ETH held by the accounts. EOA transacts and pays gas fees 
-using its available balance. Contracts move around amount from its total 
+using its available balance. Contracts move around ETH from its total 
 balance based on code but charges the EOA for gas fees.
 
 ## What is Storage Hash ?
@@ -231,7 +231,7 @@ corresponding opcode. An exhaustive list of opcodes is available
 
 ## Application Binary Interface (ABI)
 
-In Ethereum, an ABI is a standardizes way for interacting with a smart 
+In Ethereum, an ABI is a standardized way for interacting with a smart 
 contract. It defines how data should be serialized and deserialized when being 
 sent to and from a contract on the blockchain.
 
