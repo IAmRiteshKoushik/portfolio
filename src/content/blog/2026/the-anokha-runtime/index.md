@@ -14,7 +14,7 @@ There has been a realization that the knowledge and experience gained during
 building the tech that powers this massive fest of 5000+ students, 100s or 
 organizers, admins and hospitality staff over a month and 3 nights; is quite siloed!
 
-If you are someone, who wants to jump directly into the code, [here you go.](https://github.com/Infinite-Sum-Games/anokha-25-backend)
+If you are someone, who wants to jump directly into the code, [here you go.](https://github.com/Infinite-Sum-Games/anokha-2025-backend)
 
 > Beaware, it's not very documented. That's why this blog :)
 
