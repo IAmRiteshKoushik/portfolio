@@ -109,7 +109,42 @@ very easily using SQL. There is no necessity to look for a NoSQL or a distribute
 database by sacrificing curcial RDBMS business features at the peril of 
 reinventing them in application code. 
 
-Rely on the strength of SQL.
+Harness the strength of SQL. For combining our application code with SQL, we 
+used a code generation tool called - `sqlc`. Here's our configuration:
+```yaml
+version: "2"
+
+sql:
+  - engine: "postgresql"
+    queries: "db/queries"
+    schema: 
+      - db/migrations
+    gen:
+      go:
+        emit_methods_with_db_argument: true
+        emit_json_tags: true
+        package: "db"
+        out: "db/gen"
+        sql_package: "pgx/v5"
+        overrides:
+          - db_type: "uuid"
+            go_type:
+              import: "github.com/google/uuid"
+              type: "UUID"
+          - db_type: "timestampz"
+            go_type:
+              import: "time"
+              type: "Time"
+          - db_type: "json"
+            go_type: "encoding/json.RawMessage"
+          - db_type: "jsonb"
+            go_type: "encoding/json.RawMessage"
+```
+
+Using `sqlc` allowed us to just write SQL queries and type-safe Go code would be 
+automatically generated for us. Personally, I have found this approach better 
+than using ORMs where you start contorting the ORM-specific syntax to reach 
+for complicated JOINs, subqueries, nested queries and CTEs.
 
 ## Database Schema, Beyond the Classroom
 
@@ -187,6 +222,64 @@ around tokens as a shared state across different web pages.
 - Better security and less chances of tampering.
 - CSRF protection on all form submissions.
 
+Here's a small code snippet for your understanding:
+
+```go
+func SetCookie(c *gin.Context, authTokenString string) {
+	if viper.GetString("env") == "PRODUCTION" {
+		c.SetSameSite(http.SameSiteStrictMode)
+	} else {
+		c.SetSameSite(http.SameSiteNoneMode)
+	}
+	c.SetCookie(
+		"token_type",       // access, refresh, csrf
+		tokenString,        // value
+		3600,                 // maxAge (1 hour)
+		"/",                  // path
+		cmd.Env.CookieDomain, // domain
+		cmd.Env.CookieSecure, // secure
+		true,                 // httpOnly
+	)
+}
+
+// We would revoke the token that is being sent in the cookie 
+// incase of logouts
+func RevokeRefreshToken(c *gin.Context, email string) {
+    ctxTime := 15 * time.Second
+	ctx, cancel := context.WithTimeout(context.Background(), ctxTime)
+	defer cancel()
+
+	conn, err := cmd.DBPool.Acquire(ctx)
+	if HandleDbAcquireErr(c, err, "AUTH") {
+		return
+	}
+	defer conn.Release()
+
+	isStudent := c.GetBool("STUDENT-ROLE")
+	isOrganizer := c.GetBool("ORGANIZER-ROLE")
+	isAdmin := c.GetBool("ADMIN-ROLE")
+	isHospitality := c.GetBool("HOSPITALITY-ROLE")
+
+	q := db.New()
+
+	if isStudent {
+		_, err = q.RevokeRefreshTokenQuery(ctx, conn, email)
+	} else if isOrganizer {
+		_, err = q.RevokeOrganizerRefreshTokenQuery(ctx, conn, email)
+	} else if isAdmin {
+		_, err = q.RevokeAdminRefreshTokenQuery(ctx, conn, email)
+	} else if isHospitality {
+		_, err = q.RevokeHospitalityRefreshTokenQuery(ctx, conn, email)
+	}
+
+	if err != nil {
+		Log.ErrorCtx(c, "[AUTH-ERROR]: Failed to revoke in DB", err)
+		return
+	}
+	Log.InfoCtx(c, "[AUTH-INFO]: Successfully revoked in DB")
+}
+```
+
 ## Special Events and RabbitMQ
 
 While quite a late addition to the stack, there was this lurking problem of 
@@ -251,6 +344,99 @@ primary API stays unaffected.
 This also proved that we would make data better available to other organizers 
 in the future. Termite can be a fully fledged platform for webhook dispatch, 
 retries and monitoring.
+
+## On Managing Infrastructure
+
+### a. Caddy - Reverse Proxy and Load Balancer
+On our server, we ran an instance of [Caddy](https://caddyserver.com/) to 
+serve all of our applications. Historically, we have used Nginx and for good 
+reason. It is undoubtedly the most perfromant load-balancer and reverse proxy 
+out there, however for our needs, we wanted to use something that offers 
+decent performance and has minimal syntax to make changes.
+
+1. Caddy comes with very minimal configuration to serve static pages or be a 
+reverse proxy.
+2. It has automatic HTTPS and SSL renewal, so we do not have to configure a 
+`certificate authority`.
+3. It can serve certificates by itself through `internal tls` so that we can 
+get HTTPS even when the outside world is blocked by our VPN.
+
+Here's what our config looked like:
+```bash
+anokha.amrita.edu {
+    # Grafana UI
+    reverse_proxy /grafana* localhost:9100
+
+    # Admin portal
+    reverse_proxy /admin/* localhost:5173
+
+    # Organizer portal
+    reverse_proxy /org/* localhost:4173
+
+    # Hospitality portal
+    reverse_proxy /room/* localhost:4174
+
+    # QR Scanning App
+    reverse_proxy /app/* localhost:4175
+
+    # Backend
+    reverse_proxy /api/v1* localhost:9000
+
+    # Main Website
+    reverse_proxy localhost:3000
+}
+```
+
+### b. pm2 - The Background Process Manager
+We have all done - `npm run dev` and `npm run start` to run our applications 
+while developing locally, but the question is - how do you serve them as a 
+background process which keep running after you have logged out of the SSH 
+window to your server.
+
+The traditional way to do it in a linux machine is to use `.service` files and 
+start them as follows:
+```bash
+sudo systemctl start app.service
+sudo systemctl status app.service
+```
+
+A more convenient solution was to offload this entire process to [**pm2.**](https://pm2.io/)
+
+Initial setup:
+```bash
+pm2 start "make run" --name backend
+# or 
+pm2 start "npm run start" --name frontend
+```
+
+Redeployments:
+```bash
+git pull <repo-name>
+make build # (or) npm run build
+pm2 restart <app-name>
+```
+
+### c. Prometheus, Grafana and Exporters
+As part of our monitoring stack, we use Prometheus as a time-series database 
+and added the prometheus middleware to our Go application for scraping metrics.
+
+Additionally, we used:
+1. Postgres exporter and
+2. Node exporter
+
+To pull metrics and data from PostgreSQL server and the VM itself that was 
+running everything. Grafana became our pretty visualization dashboard where we 
+used pre-built dashboards by the community.
+
+---
+
+This allowed us to have a quick, and zero-configuration observability setup that 
+came in handy when we faced a `Denial-Of-Service` attack. The Grafana dashboard 
+highlighted a network traffic spike and when we checked the logs and found 
+out the IP addresses attacking us, we were able to block them instantly using 
+minimal configs in Caddy.
+
+
 
 ## An Ode to The Next Generation of Builders
 
