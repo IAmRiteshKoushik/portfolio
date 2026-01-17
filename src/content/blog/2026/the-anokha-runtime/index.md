@@ -342,7 +342,7 @@ Cheers! To the entire Anokha '26 Web Team, in no particular order:
 
 and myself.
 
-Once again, you can find all the code [here.](https://github.com/Infinite-Sum-Games/anokha-25-backend)
+Once again, you can find all the code [here.](https://github.com/Infinite-Sum-Games/anokha-2025-backend)
 
 ---
 
