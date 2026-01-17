@@ -11,8 +11,9 @@ and take anyone who is interested in computer science, through a journey of our
 choices and principles in designing the backend of this year's fest. 
 
 There has been a realization that the knowledge and experience gained during 
-building the tech that powers this massive fest of 5000+ students, 100s or 
+building the tech that powers this massive fest of 5000+ students, 100s of
 organizers, admins and hospitality staff over a month and 3 nights; is quite siloed!
+So, I have decided that that's gotta change.
 
 If you are someone, who wants to jump directly into the code, [here you go.](https://github.com/Infinite-Sum-Games/anokha-2025-backend)
 
