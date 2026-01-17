@@ -42,7 +42,7 @@ A quick rundown of the tech-stack and links to their corresponding libraries:
 Before we begin, let's take a look some of the numbers so that we can have an 
 understanding of the scale that we are handling.
 
-1. Number of portal registrations: 4000+
+1. Number of portal registrations: 5500+
 2. Number of tickets sold: 5000+
 3. Number of events: 50+
 4. Number of admins, organizers and logistics staff: ~150
@@ -163,8 +163,8 @@ Previously, the backend was written in JavaScript and even before that, it was
 perhaps PHP. While we could have written it in Python, the seniormost folks 
 in the team had extensive experience with Go.
 
-This language seems to make the perfect trade-off between simplicity, performance
-easy of building concurrency and easy to deployment. There were battle-tested 
+This language seems to make the perfect trade-off between simplicity, performance,
+ease of building concurrency and ease of deployment. There were battle-tested 
 libraries for everything we needed. 
 
 As more and more developers start building, the need for software to be simple 
@@ -303,7 +303,15 @@ discounts by removing the 1:1 mapping of event to price.
 6. Setup continuous deployment using GitHub's webhooks and our 
 [self-hosted Dokploy](https://dokploy.com/) instance on CORE lab's infrastructure.
 
-7. Apart from these, there are a few [open issues.](https://github.com/Infinite-Sum-Games/anokha-2025-backend/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen)
+7. Unify all the different roles into a single user table. This time, while we 
+rolled out cookies, there was an acute problem. Once you sign into one portal, 
+you were mandatorily signed out of another one. This happened due to each user 
+persona - admin, student, etc; getting unique accounts with unique roles. Next 
+time around, it's imperative to have all the roles added to the same user and 
+change the claims of the auth token. This would bring forth a couple of changes 
+in DB schema as well. Here's a [suggested schema.](https://www.better-auth.com/docs/concepts/database#core-schema)
+
+8. Apart from these, there are a few [open issues.](https://github.com/Infinite-Sum-Games/anokha-2025-backend/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen)
 
 ## Closing Thoughts
 
@@ -317,17 +325,20 @@ If you are interested, you can find a more comprehensive wishlist [here.](https:
 Cheers! To the entire Anokha '26 Web Team, in no particular order:
 - [Tharun Kumarr A - 4th Year (Head)](github.com/TharunKumarrA/)  
 - [Thanus Kumaar A - 4th Year](https://github.com/Thanus-Kumaar/)
-- [Naganathan M - 4th Year]()
-- [Revanth Singothu - 4th Year]()
-- [Adithya Menon R - 3rd Year (Co-Head)]()
-- [Kiran Rajeev - 3rd Year]()
-- [Vijay SB - 3rd Year]()
-- [Shivanesh M - 3rd Year]()
-- [Keerthivasan V - 3rd Year]()
-- [Amrith B - 3rd Year]()
-- [Akshay KS - 3rd Year]()
-- [Nandgopal Nair - 3rd Year]()
-- [Saran Hiruthik - 3rd Year]()
+- [Naganathan M - 4th Year](https://github.com/Naganathan05)
+- [Revanth Singothu - 4th Year](https://github.com/rev-sin)
+- [Adithya Menon R - 3rd Year (Co-Head)](https://github.com/adithya-menon-r)
+- [Kiran Rajeev - 3rd Year](https://github.com/KiranRajeev-KV)
+- [Vijay SB - 3rd Year](github.com/vijay-sb/)
+- [Shivanesh M - 3rd Year](https://github.com/shivanesh1495)
+- [Keerthivasan V - 3rd Year](https://github.com/Keerthivasan-Venkitajalam)
+- [Amrith B - 3rd Year](https://github.com/AMRITH03)
+- [Akshay KS - 3rd Year](https://github.com/akshayks13)
+- [Nandgopal Nair - 3rd Year](https://github.com/Nandgopal-R)
+- [Saran Hiruthik - 3rd Year](https://github.com/SaranHiruthikM)
+- [Minoti Gupta - 2nd Year](https://github.com/MinotiGupta)
+- [Samith Reddy - 2nd Year](https://github.com/samithreddychinni)
+- [Shruhath Reddy - 2nd Year](https://github.com/Shruhath)
 
 and myself.
 
