@@ -169,7 +169,7 @@ ease of building concurrency and ease of deployment. There were battle-tested
 libraries for everything we needed. 
 
 As more and more developers start building, the need for software to be simple 
-to read and implement if of utmost importance. Having written the system in Go, 
+to read and implement is of utmost importance. Having written the system in Go, 
 we do hope that it'll cause a chain reaction leading to birthing of more Go 
 developers in the future.
 
