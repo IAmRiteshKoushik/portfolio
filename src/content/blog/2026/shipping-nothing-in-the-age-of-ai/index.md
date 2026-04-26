@@ -40,7 +40,7 @@ all over it :)
 It's got a fundamentally different mental model from a demo-ware that works 
 only on the happy path.
 
-## Traps and threats
+## Checks, captures and threats
 
 It has come to my observation that the current environment rewards visible 
 output. A working UI, an integration and a fast demo. What is not visible 
@@ -92,19 +92,19 @@ All of this culminates into motion without completion signals.
 
 ## Time to rollout a fix
 
-The adjustment to make here would not be to reject AI tools of quick 
+The adjustment to make here would not be to reject AI tools or quick 
 iteration outright. Those are definitely useful. The adjustment would be to 
 anchor them within a system that prioritizes depth and completion.
 
 This means, committing to a single project with a clear definition of being done.
 
-Let's start with what I will not do:
+Let's start with the negative space. Things not to do:
 1. No scope expansion for novelty
 2. No parallel projects
 3. No mid-cycle direction changes
 
 So, here's the direction that I am taking. Build a production-grade **calling 
-agent system** end to end. It is a system that handles external state, manages 
+agent system** end-to-end. It is a system that handles external state, manages 
 state overtime, and operates under real constraints.
 
 The system addresses the following backend challenges:
