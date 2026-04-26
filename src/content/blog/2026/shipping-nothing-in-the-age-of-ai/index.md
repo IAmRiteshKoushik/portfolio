@@ -52,17 +52,18 @@ something. In your head, you are always on the move. A good way to summarize
 this would be 
 
 1. Immediate feedback from AI tools short-circuits the loop
-2. Shipping "something" is easier than owning "someting"
+2. Shipping "something" is easier than owning "something"
 3. Social validation favours demos over durability
 4. Hard problems get naturally deferred to a different timeline
 
 At this juncture, it is important to realize that generating is not the same as 
-building. None of this is malicious in and itself, it is simply the path of least 
-resistance!
+building. None of this is malicious in and itself, however it is simply the path 
+of least resistance!
 
-## My state
+## My current state
 
-With that being said, I am not outside of it. I am exactly in this vat of chemicals.
+With that being said, I am not outside of it. I am exactly in this radioactive 
+vat of chemicals, decaying by the minute ...
 
 It feels like I have not shipped anything meaningful in a long time. Ofcourse 
 I have written code, explored newer systems, learned tools and started in 
