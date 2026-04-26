@@ -40,7 +40,7 @@ all over it :)
 It's got a fundamentally different mental model from a demo-ware that works 
 only on the happy path.
 
-## Checks, captures and threats
+## Traps and threats
 
 It has come to my observation that the current environment rewards visible 
 output. A working UI, an integration and a fast demo. What is not visible 
