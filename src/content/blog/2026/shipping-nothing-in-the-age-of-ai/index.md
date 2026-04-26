@@ -60,6 +60,50 @@ At this juncture, it is important to realize that generating is not the same as
 building. None of this is malicious in and itself, however it is simply the path 
 of least resistance!
 
+## You are underqualified to be the harness
+
+There is a subtle shift happening right now in how software is being written.
+The developer has moved away from writing code to being a harness. His job is 
+to take generated output, stitching it coherently and deciding what is acceptable.
+
+Now that is a role assumes something important: **judgement**
+
+If you do not have technical depth to do a comprehensive evaluation of the 
+generated code, then you are failing as a harness. You are just a conduit.
+
+You lean towards accepting what "looks right", often optimizing for local 
+correctness without capturing the global intentions, correctness and 
+trade-offs being made by this change.
+
+This becomes more and more dangerous as you move up the stack.
+
+A simple function generated has very little blast radius. However, when it 
+starts influencing system design. Things like service boundaries, data-flow, 
+retry semantics and consistency models; that's when the consequences can 
+start compounding. Poor decision at the higher level are not obvious 
+immediately. They surface their ugly head under load, failure and when 
+software has to evolve.
+
+At that point, the system has lost its malleability and hardened itself 
+around those poor decisions. The problems at the level of architecting the 
+system itself cannot be patched immediately. They are fundamental.
+
+Without a strong mental model, you cannot push back on what AI suggests. You 
+find yourself unable to reject a solution that works in isolation but breaks 
+the global state. This loop reinforces itself as you rely more on generated 
+output due to its velocity. Your evaluation capabilities do not keep up 
+pace with this and eventually you have a system out of your control.
+
+This is not an argument against AI. It is an argument about responsibility. If 
+you are using AI as a force multiplier, you need to have something worth 
+multiplying. That something is judgement built from experience and accumulating 
+scar-tissue with real systems, real failures and real constraints.
+
+In the absence of sound judgement, you are not accelerating. You are snowballing 
+bad decisions which you do not fully comprehend. 
+
+The bill comes due.
+
 ## My current state
 
 With that being said, I am not outside of it. I am exactly in this radioactive 
@@ -152,3 +196,11 @@ that addresses it and carry it through till completion with reliability,
 observability and maintainability.
 
 That's what I am going to ship.
+
+---
+
+## Honourable Mention
+
+[Kiran Rajeev KV](https://github.com/KiranRajeev-KV) for suggesting the 
+section on [you are underqualified as a harness](#you-are-underqualified-to-be-the-harness)
+and proof reading the blog as always.
