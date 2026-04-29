@@ -1,0 +1,115 @@
+---
+import { COMMENTS } from "@consts";
+
+const isConfigured = COMMENTS.ENABLED;
+---
+
+{
+	isConfigured ? (
+		<section class="mt-16 border-t border-black/10 pt-8 dark:border-white/10">
+			<div class="mb-6 space-y-1">
+				<h2 class="text-lg font-semibold text-black dark:text-white">Comments</h2>
+				<p class="text-sm">Join the discussion on GitHub Discussions.</p>
+			</div>
+			<div
+				class="giscus js-giscus"
+				data-repo={COMMENTS.REPO}
+				data-repo-id={COMMENTS.REPO_ID}
+				data-category={COMMENTS.CATEGORY}
+				data-category-id={COMMENTS.CATEGORY_ID}
+				data-mapping={COMMENTS.MAPPING}
+				data-strict={COMMENTS.STRICT}
+				data-reactions-enabled={COMMENTS.REACTIONS_ENABLED}
+				data-input-position={COMMENTS.INPUT_POSITION}
+				data-lang={COMMENTS.LANG}
+				data-light-theme={COMMENTS.LIGHT_THEME}
+				data-dark-theme={COMMENTS.DARK_THEME}
+			></div>
+		</section>
+	) : (
+		import.meta.env.DEV && (
+			<section class="mt-16 rounded-lg border border-dashed border-black/15 p-4 text-sm dark:border-white/20">
+				Add the `PUBLIC_GISCUS_*` values from `.env.example` to enable comments.
+			</section>
+		)
+	)
+}
+
+<script is:inline>
+  (() => {
+    const stateKey = "__giscusComments";
+
+    const getContainer = () => document.querySelector(".js-giscus");
+
+    const getTheme = (container) =>
+      document.documentElement.classList.contains("dark")
+        ? container.dataset.darkTheme
+        : container.dataset.lightTheme;
+
+    const syncTheme = () => {
+      const container = getContainer();
+      const iframe = document.querySelector("iframe.giscus-frame");
+
+      if (!(container instanceof HTMLElement) || !(iframe instanceof HTMLIFrameElement)) {
+        return;
+      }
+
+      iframe.contentWindow?.postMessage(
+        {
+          giscus: {
+            setConfig: {
+              theme: getTheme(container),
+            },
+          },
+        },
+        "https://giscus.app",
+      );
+    };
+
+    const mount = () => {
+      const container = getContainer();
+
+      if (!(container instanceof HTMLElement)) {
+        return;
+      }
+
+      if (container.dataset.loaded === "true") {
+        syncTheme();
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.src = "https://giscus.app/client.js";
+      script.async = true;
+      script.crossOrigin = "anonymous";
+      script.setAttribute("data-repo", container.dataset.repo ?? "");
+      script.setAttribute("data-repo-id", container.dataset.repoId ?? "");
+      script.setAttribute("data-category", container.dataset.category ?? "");
+      script.setAttribute("data-category-id", container.dataset.categoryId ?? "");
+      script.setAttribute("data-mapping", container.dataset.mapping ?? "pathname");
+      script.setAttribute("data-strict", container.dataset.strict ?? "0");
+      script.setAttribute(
+        "data-reactions-enabled",
+        container.dataset.reactionsEnabled ?? "1",
+      );
+      script.setAttribute(
+        "data-input-position",
+        container.dataset.inputPosition ?? "bottom",
+      );
+      script.setAttribute("data-theme", getTheme(container) ?? "light");
+      script.setAttribute("data-lang", container.dataset.lang ?? "en");
+      script.setAttribute("data-loading", "lazy");
+      container.appendChild(script);
+      container.dataset.loaded = "true";
+    };
+
+    if (!window[stateKey]) {
+      window[stateKey] = { mount, syncTheme };
+      document.addEventListener("DOMContentLoaded", mount);
+      document.addEventListener("astro:after-swap", mount);
+      document.addEventListener("site-theme-change", syncTheme);
+    }
+
+    window[stateKey].mount();
+  })();
+</script>

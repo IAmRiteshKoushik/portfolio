@@ -163,6 +163,12 @@ function toggleTheme(dark) {
 
   window.getComputedStyle(css).opacity;
     document.head.removeChild(css);
+
+    document.dispatchEvent(
+      new CustomEvent("site-theme-change", {
+        detail: { dark }
+      })
+    );
   }
 
   function preloadTheme() {
