@@ -238,7 +238,7 @@ careful invalidation and you risk caching a temporary absence state.
 
 #### Example 2: Product Catalog in eCommerce
 
-- Use a state-while revalidating with long TTLs
+- Use a stale-while revalidating with long TTLs
 
 - Again the read volume is high and data changes infrequently
 
