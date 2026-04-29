@@ -1,4 +1,4 @@
-import type { Site, Metadata, Socials } from "@types";
+import type { Comments, Site, Metadata, Socials } from "@types";
 
 export const SITE: Site = {
 	NAME: "Ritesh Koushik",
@@ -6,6 +6,32 @@ export const SITE: Site = {
 	NUM_POSTS_ON_HOMEPAGE: 5,
 	NUM_WORKS_ON_HOMEPAGE: 2,
 	NUM_PROJECTS_ON_HOMEPAGE: 2,
+};
+
+const giscusRepo = import.meta.env.PUBLIC_GISCUS_REPO?.trim() ?? "";
+const giscusRepoId = import.meta.env.PUBLIC_GISCUS_REPO_ID?.trim() ?? "";
+const giscusCategory = import.meta.env.PUBLIC_GISCUS_CATEGORY?.trim() ?? "";
+const giscusCategoryId =
+	import.meta.env.PUBLIC_GISCUS_CATEGORY_ID?.trim() ?? "";
+
+export const COMMENTS: Comments = {
+	ENABLED: [giscusRepo, giscusRepoId, giscusCategory, giscusCategoryId].every(
+		Boolean,
+	),
+	REPO: giscusRepo,
+	REPO_ID: giscusRepoId,
+	CATEGORY: giscusCategory,
+	CATEGORY_ID: giscusCategoryId,
+	MAPPING: import.meta.env.PUBLIC_GISCUS_MAPPING?.trim() || "pathname",
+	STRICT: import.meta.env.PUBLIC_GISCUS_STRICT === "1" ? "1" : "0",
+	REACTIONS_ENABLED:
+		import.meta.env.PUBLIC_GISCUS_REACTIONS_ENABLED === "0" ? "0" : "1",
+	INPUT_POSITION:
+		import.meta.env.PUBLIC_GISCUS_INPUT_POSITION === "top" ? "top" : "bottom",
+	LANG: import.meta.env.PUBLIC_GISCUS_LANG?.trim() || "en",
+	LIGHT_THEME: import.meta.env.PUBLIC_GISCUS_LIGHT_THEME?.trim() || "light",
+	DARK_THEME:
+		import.meta.env.PUBLIC_GISCUS_DARK_THEME?.trim() || "dark_dimmed",
 };
 
 export const HOME: Metadata = {

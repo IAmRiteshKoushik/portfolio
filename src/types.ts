@@ -6,6 +6,21 @@ export type Site = {
   NUM_PROJECTS_ON_HOMEPAGE: number;
 };
 
+export type Comments = {
+  ENABLED: boolean;
+  REPO: string;
+  REPO_ID: string;
+  CATEGORY: string;
+  CATEGORY_ID: string;
+  MAPPING: string;
+  STRICT: string;
+  REACTIONS_ENABLED: string;
+  INPUT_POSITION: string;
+  LANG: string;
+  LIGHT_THEME: string;
+  DARK_THEME: string;
+};
+
 export type Metadata = {
   TITLE: string;
   DESCRIPTION: string;
