@@ -26,7 +26,7 @@ const work = await Promise.all(
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
-    <h4 class="animate font-semibold text-black dark:text-white">
+    <h4 class="animate home-section-heading text-black dark:text-white">
       Hi, I'm Ritesh <span class="text-xl">👋🏻</span> 
     </h4>
     <div class="space-y-16">
@@ -46,7 +46,7 @@ const work = await Promise.all(
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
+          <h5 class="home-section-heading text-black dark:text-white">
             My Latest blogs
           </h5>
           <Link href="/blog">
@@ -66,7 +66,7 @@ const work = await Promise.all(
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
+          <h5 class="home-section-heading text-black dark:text-white">
             My Work Experience
           </h5>
           <Link href="/work">
@@ -94,7 +94,7 @@ const work = await Promise.all(
       </section>
 
       <section class="animate space-y-4">
-        <h5 class="font-semibold text-black dark:text-white">
+        <h5 class="home-section-heading text-black dark:text-white">
           Let's Connect
         </h5>
         <article>
@@ -122,3 +122,12 @@ const work = await Promise.all(
     </div>
   </Container>
 </PageLayout>
+
+<style>
+  .home-section-heading {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-size: clamp(1.55rem, 2.2vw, 2rem);
+    line-height: 1.15;
+  }
+</style>
