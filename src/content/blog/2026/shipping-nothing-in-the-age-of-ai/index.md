@@ -4,7 +4,7 @@ description: ""
 date: "April 27 2026"
 ---
 
-## We are all AI-pilled
+# We are all AI-pilled
 
 Year 2026. Everyone is building fast. From prompt to scaffold to deployment. 
 Everything works (on the surface) and we are shipping at the speed of inference.
@@ -24,7 +24,7 @@ evolution and productionizing software.
 Somewhere, I think the problem is not AI, but the human behaviors that it 
 incentivizes...
 
-## Let's talk "real software" shall we
+# Let's talk "real software" shall we
 
 Software that survives contact with reality (users) is what this is all about. 
 It is not an abstract / absolutist ideal to chase.
@@ -40,7 +40,7 @@ all over it :)
 It's got a fundamentally different mental model from a demo-ware that works 
 only on the happy path.
 
-## Traps and threats
+# Traps and threats
 
 It has come to my observation that the current environment rewards visible 
 output. A working UI, an integration and a fast demo. What is not visible 
@@ -60,7 +60,7 @@ At this juncture, it is important to realize that generating is not the same as
 building. None of this is malicious in and itself, however it is simply the path 
 of least resistance!
 
-## You are underqualified to be the harness
+# You are underqualified to be the harness
 
 There is a subtle shift happening right now in how software is being written.
 The developer has moved away from writing code to being a harness. His job is 
@@ -104,7 +104,7 @@ bad decisions which you do not fully comprehend.
 
 The bill comes due.
 
-## My current state
+# My current state
 
 With that being said, I am not outside of it. I am exactly in this radioactive 
 vat of chemicals, decaying by the minute ...
@@ -123,7 +123,7 @@ criticized. Without more eye balls on software, it remains sheltered and safe.
 
 I have been playing it safe...
 
-## Diagnosis
+# Diagnosis
 
 So, what has actually gone wrong in the past 2 months. Here are the patterns 
 that I have noticed:
@@ -134,7 +134,7 @@ that I have noticed:
 
 All of this culminates into motion without completion signals.
 
-## Time to rollout a fix
+# Time to rollout a fix
 
 The adjustment to make here would not be to reject AI tools or quick 
 iteration outright. Those are definitely useful. The adjustment would be to 
@@ -163,7 +163,7 @@ The system addresses the following backend challenges:
 - Queue-based processing with retries and failure isolation
 - A clear and observable flow
 
-## Deep work is the requirement
+# Deep work is the requirement
 
 This kind of system cannot be built on shallow cycles. The underlying 
 sub-problems need sustained long-term attention. Deep work is not a preference 
@@ -183,7 +183,7 @@ Ground rules:
 While this is slow, it is also the only way in which I can produce something that
 would hold up!
 
-## Commitments
+# Commitments
 
 This blog is not an outlook on the industry. It is just a collection of 
 gaps and corrections on how I need to operate.
@@ -199,7 +199,7 @@ That's what I am going to ship.
 
 ---
 
-## Honourable Mention
+# Honourable Mention
 
 [Kiran Rajeev KV](https://github.com/KiranRajeev-KV) for suggesting the 
 section on [you are underqualified as a harness](#you-are-underqualified-to-be-the-harness)

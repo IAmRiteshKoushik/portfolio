@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #fbfbf8;
+  --text: #222222;
+  --muted: #6b6b6b;
+  --line: #dddddd;
+  --accent-text: #fa923d;
+  --accent-text-hover: #ffab67;
+  --accent-underline: #9a3514;
+  --inline-code-bg: #f3f4f6;
+  --inline-code-border: #e5e7eb;
+  --inline-code-text: #1f2937;
+}
+
 html {
   overflow-y: scroll;
   color-scheme: light;
@@ -11,47 +24,154 @@ html.dark {
   color-scheme: dark;
 }
 
+html.dark {
+  --bg: #0e0c0b;
+  --text: #ebebeb;
+  --muted: #9d9d9d;
+  --line: #2a2a2a;
+  --accent-text: #fa923d;
+  --accent-text-hover: #ffab67;
+  --accent-underline: #9a3514;
+  --inline-code-bg: #1f232b;
+  --inline-code-border: #2f3540;
+  --inline-code-text: #f3f4f6;
+}
+
 html,
 body {
   @apply size-full;
 }
 
 body {
-  @apply font-sans antialiased;
+  @apply antialiased;
+  font-family: "Geist", system-ui, sans-serif;
   @apply flex flex-col;
-  @apply bg-stone-100 dark:bg-stone-900;
-  @apply text-black/50 dark:text-white/75;
+  background: var(--bg);
+  color: var(--text);
 }
 
 header {
-  @apply fixed top-0 left-0 right-0 z-50 py-5;
-  @apply bg-stone-100/75 dark:bg-stone-900/25;
-  @apply backdrop-blur-sm saturate-200;
+  @apply sticky top-0 left-0 right-0 z-50 py-5;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  @apply backdrop-blur-sm;
+  border-bottom: 1px solid transparent;
+}
+
+html.scrolled header {
+  border-bottom-color: var(--line);
 }
 
 main {
-  @apply flex-1 py-32;
+  @apply flex-1 py-16;
 }
 
 footer {
-  @apply py-5 text-sm;
+  @apply py-8 text-sm;
+  color: var(--muted);
+}
+
+.site-title {
+  font-family: "Instrument Serif", serif;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--text);
+}
+
+.header-inner {
+  @apply flex flex-wrap gap-y-3 items-center justify-between;
+}
+
+.header-nav {
+  @apply flex items-center gap-4 text-sm;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.header-nav a:hover {
+  color: var(--text);
+}
+
+.theme-toggle {
+  @apply inline-flex items-center justify-center rounded-md w-8 h-8 transition-colors duration-200;
+  color: var(--muted);
+}
+
+.theme-toggle:hover {
+  background: color-mix(in srgb, var(--line) 45%, transparent);
+  color: var(--text);
+}
+
+.theme-icon-sun {
+  display: none;
+}
+
+html.dark .theme-icon-sun {
+  display: inline;
+}
+
+html.dark .theme-icon-moon {
+  display: none;
+}
+
+.footer-inner {
+  @apply flex items-center justify-between gap-4;
+}
+
+.footer-links {
+  @apply flex items-center gap-4;
 }
 
 article {
   @apply max-w-full prose dark:prose-invert prose-img:mx-auto prose-img:my-auto;
-  @apply prose-headings:font-semibold prose-p:font-serif;
-  @apply prose-headings:text-black prose-headings:dark:text-white;
+  @apply prose-headings:text-[var(--text)];
+  @apply prose-p:text-[var(--text)] prose-p:leading-7;
+  @apply prose-strong:text-[var(--text)];
+  @apply prose-code:text-[var(--text)];
+  @apply prose-li:text-[var(--text)];
+}
+
+article h1,
+article h2,
+article h3,
+article h4 {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+}
+
+article code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9em;
+}
+
+article :not(pre) > code {
+  background: var(--inline-code-bg);
+  color: var(--inline-code-text);
+  border: 1px solid var(--inline-code-border);
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.45rem;
+  font-weight: 600;
+}
+
+article :not(pre) > code::before,
+article :not(pre) > code::after {
+  content: "";
 }
 
 @layer utilities {
+  a {
+    @apply transition-colors duration-200;
+  }
   article a {
-    @apply font-sans text-current underline underline-offset-2;
-    @apply decoration-black/15 dark:decoration-white/30;
-    @apply transition-colors duration-300 ease-in-out;
+    @apply underline underline-offset-2;
+    color: var(--accent-text);
+    text-decoration-color: var(--accent-underline);
   }
   article a:hover {
-    @apply text-black dark:text-white;
-    @apply decoration-black/25 dark:decoration-white/50;
+    color: var(--accent-text-hover);
+    text-decoration-color: var(--accent-underline);
   }
 }
 

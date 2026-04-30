@@ -8,7 +8,7 @@ As a developer, adding custom fonts in your Electron.js applications always
 gives a clean and polished finishing. I am writing this guide to walk you 
 through on the steps required manually add fonts to your app.
 
-## Step 1: Scaffolding - Electron, Vite and TailwindCSS
+# Step 1: Scaffolding - Electron, Vite and TailwindCSS
 
 In order to get started, use the `@quick-start/create-electron` template. Here's 
 a link to the setup steps for your [Electron, Vite and TypeScript app.](https://www.npmjs.com/package/@quick-start/create-electron)
@@ -56,7 +56,7 @@ export default defineConfig({
 });
 ```
 
-## Step 2: Download the Font Files from Google Font
+# Step 2: Download the Font Files from Google Font
 
 - Head over to [Google Fonts](https://fonts.google.com/) and choose a font of your
 choice. For this guide, I am choosing the [Inter](https://fonts.google.com/specimen/Inter?preview.text=Whereas%20recognition%20of%20the%20inherent%20dignity) font and downloading all the variants. 
@@ -67,7 +67,7 @@ font file and not the static font files.
 - Move the variable-length `.ttf` files to `src/renderer/src/assets/fonts/` directory
 for your font.
 
-## Step 3: Import and Use the Font
+# Step 3: Import and Use the Font
 
 Finally, time to setup `src/renderer/src/assets/index.css`. You can clear out all 
 other CSS files. One file is enough. Import the same in `main.tsx`.
@@ -134,7 +134,7 @@ Import it as the global font in the same file.
 
 And that's it. Now, you can use this in your application.
 
-## Verify the Installation
+# Verify the Installation
 
 Try adding the following code in `App.tsx` and run using `npm run dev` or 
 your package manager of choice. You should see your font.

@@ -61,7 +61,7 @@ If a new miner is to join the network, it can either capture a snapshot of the
 blockchain, or execute each transaction from the genesis block to catch-up to 
 the current state of all accounts on the chain.
 
-## Types of Accounts
+# Types of Accounts
 
 Ethereum is the first-blockchain to introduce the concept of smart contracts.
 The moat of ethereum was to allow people to deploy code on the blockchain 
@@ -69,7 +69,7 @@ and build applications which would be known as **dApps** (decentralized apps).
 
 So, there are two types of accounts
 
-### 1. Externally Owned Accounts (EOA)
+## 1. Externally Owned Accounts (EOA)
 
 An account that is controlled by a user using a private key. You can view 
 it's balance through it's public key on [etherscan.io](https://etherscan.io/)
@@ -95,7 +95,7 @@ account based on code/logic.
 send. This is used to incentivise miners or validators to process and validate 
 the transaction.
 
-### 2. Contract Accounts (owned by smart contracts)
+## 2. Contract Accounts (owned by smart contracts)
 
 An account controlled by a smart contract code that was deployed on the chain 
 rather than a private key.
@@ -138,9 +138,9 @@ but there is a concept of **upgradability.**
 
 This introduces a few terms which we will try to understand now.
 
-## What is a nonce ?
+# What is a nonce ?
 
-### EOA
+## EOA
 
 - Nonce is the number of transactions sent by the EOA. It is a counter that 
 increases after each transaction.
@@ -148,7 +148,7 @@ increases after each transaction.
 - It ensures unique transaction ordering and prevents double-spending, replay 
 attacks etc.
 
-### Contract Accounts
+## Contract Accounts
 
 - The number of contracts created by the account is the nonce. It is again a 
 counter. (NOTE: contract creating other contracts)
@@ -156,13 +156,13 @@ counter. (NOTE: contract creating other contracts)
 - It ensures unique contract addresses and helps in determining the address 
 of newly created accounts by being an offset.
 
-## What is balance ?
+# What is balance ?
 
 It is the amount of ETH held by the accounts. EOA transacts and pays gas fees 
 using its available balance. Contracts move around ETH from its total 
 balance based on code but charges the EOA for gas fees.
 
-## What is Storage Hash ?
+# What is Storage Hash ?
 
 Each smart contract can store some data in a key-value storage unit. This 
 usually consists of variables and flags defined in the code of the contract.
@@ -175,7 +175,7 @@ The underlying data structure is a **Merkle-Patricia Tree** which combines :
 
 2. [Patricia Tree](https://medium.com/blockchain-stories/patricia-trie-a-predestined-blockchain-thing-fddeb1a12b0) for space-efficiency and fast lookups.
 
-## What is Code Hash ?
+# What is Code Hash ?
 
 Smart Contracts are written in Solidity but compiled to EVM bytecode to be 
 executed by the Ethereum Virtual Machine (EVM).
@@ -206,7 +206,7 @@ the Ethereum paper at the age of 19 and gained a Thiel Fellowship.
 
 Before we dive into the architecture, let's go through the required taxonomy.
 
-## Bytecode and Opcode
+# Bytecode and Opcode
 
 When writing contracts, the solidity compiler can compile a smart contract in 
 two forms:
@@ -229,7 +229,7 @@ contract whose Bytecode and Solidity Code is visible along with the
 corresponding opcode. An exhaustive list of opcodes is available 
 [here](https://evm.codes). When you do gas optimizations, this comes in handy.
 
-## Application Binary Interface (ABI)
+# Application Binary Interface (ABI)
 
 In Ethereum, an ABI is a standardized way for interacting with a smart 
 contract. It defines how data should be serialized and deserialized when being 
@@ -286,7 +286,7 @@ This JSON can now be used to:
 
 3. Autogenerate UIs to interact with the contract (Remix IDE)
 
-## Finally, The EVM Architecture
+# Finally, The EVM Architecture
 
 ![EVM diagram](https://ethereum.org/content/developers/docs/evm/evm.png)
 

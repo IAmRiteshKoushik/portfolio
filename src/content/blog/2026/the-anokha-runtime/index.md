@@ -4,7 +4,7 @@ description: ""
 date: "January 17 2026"
 ---
 
-## Setting the Context
+# Setting the Context
 
 With Anokha 2026 recently concluded, I believe it is time that we pop the hood 
 and take anyone who is interested in computer science, through a journey of our 
@@ -38,7 +38,7 @@ A quick rundown of the tech-stack and links to their corresponding libraries:
 16. [Drizzle Gateway - DB Viewer](https://gateway.drizzle.team/)
 17. [Air - Hot Reload for Go](https://github.com/air-verse/air)
 
-## Understanding our Scale
+# Understanding our Scale
 
 Before we begin, let's take a look some of the numbers so that we can have an 
 understanding of the scale that we are handling.
@@ -64,8 +64,8 @@ not start thinking of database replication strategies, multi-server deployments,
 crazy load-balancing ideas or worse - throwing **Kubernetes** at the problem!
 
 At our scale, writing better SQL queries using *Common Table Expressions*, 
-monitoring database performance using [**pg_exporter**](https://grafana.com/oss/prometheus/exporters/postgres-exporter/), 
-turning the knobs on different Postgres and [**pg_bouncer**](https://www.pgbouncer.org/) 
+monitoring database performance using [pg_exporter](https://grafana.com/oss/prometheus/exporters/postgres-exporter/), 
+turning the knobs on different Postgres and [pg_bouncer](https://www.pgbouncer.org/) 
 configurations and dumb caching are the common sense principles to apply.
 
 The current API can handle - 10,000 concurrent connections but the bottleneck 
@@ -80,7 +80,7 @@ portals, backend services and the database and not once have we crossed more tha
 The few times, that the portals went unresponsive, it was our fault! It was 
 code written poorly out of inexperience.
 
-## All You Need is Postgres
+# All You Need is Postgres
 
 With the drama and the warnings out of the way, let's take a bottom-up approach.
 Where does the data reside ? In the previous iterations, Anokha ran successfully 
@@ -146,7 +146,7 @@ automatically generated for us. Personally, I have found this approach better
 than using ORMs where you start contorting the ORM-specific syntax to reach 
 for complicated JOINs, subqueries, nested queries and CTEs.
 
-## Database Schema, Beyond the Classroom
+# Database Schema, Beyond the Classroom
 
 Writing database schema is usually a boring and mudane task in classrooms and 
 assignments, but when building a production-worthy system, this is one of the 
@@ -187,7 +187,7 @@ essentials:
 You can view the complete schema by cloning the repository, migrating the DB 
 using `goose` and using something like `pg_admin` or `drizzle-gateway` for UI.
 
-## Why Did We Use Golang
+# Why Did We Use Golang
 
 A few paragraphs earlier, you heard me urging you to use any technology and not 
 reach for optimized and unknown tech like Rust, but here we are, having used 
@@ -208,7 +208,7 @@ to read and implement is of utmost importance. Having written the system in Go,
 we do hope that it'll cause a chain reaction leading to birthing of more Go 
 developers in the future.
 
-## Cookie Based Authentication
+# Cookie Based Authentication
 
 Another new paradigm we wanted to roll out was moving away from token-based 
 authentication to a cookie-based system. While this came with it's own 
@@ -280,7 +280,7 @@ func RevokeRefreshToken(c *gin.Context, email string) {
 }
 ```
 
-## Special Events and RabbitMQ
+# Special Events and RabbitMQ
 
 While quite a late addition to the stack, there was this lurking problem of 
 having to dispatch data to two uniquely positioned stake-holders:
@@ -345,9 +345,9 @@ This also proved that we would make data better available to other organizers
 in the future. Termite can be a fully fledged platform for webhook dispatch, 
 retries and monitoring.
 
-## On Managing Infrastructure
+# On Managing Infrastructure
 
-### a. Caddy - Reverse Proxy and Load Balancer
+## a. Caddy - Reverse Proxy and Load Balancer
 On our server, we ran an instance of [Caddy](https://caddyserver.com/) to 
 serve all of our applications. Historically, we have used Nginx and for good 
 reason. It is undoubtedly the most perfromant load-balancer and reverse proxy 
@@ -387,7 +387,7 @@ anokha.amrita.edu {
 }
 ```
 
-### b. pm2 - The Background Process Manager
+## b. pm2 - The Background Process Manager
 We have all done - `npm run dev` and `npm run start` to run our applications 
 while developing locally, but the question is - how do you serve them as a 
 background process which keep running after you have logged out of the SSH 
@@ -416,7 +416,7 @@ make build # (or) npm run build
 pm2 restart <app-name>
 ```
 
-### c. Prometheus, Grafana and Exporters
+## c. Prometheus, Grafana and Exporters
 As part of our monitoring stack, we use Prometheus as a time-series database 
 and added the prometheus middleware to our Go application for scraping metrics.
 
@@ -438,7 +438,7 @@ minimal configs in Caddy.
 
 
 
-## An Ode to The Next Generation of Builders
+# An Ode to The Next Generation of Builders
 
 This blog would have given you an extensive breakdown of how the 
 backend works, there are still a bunch of pain-points that need solving. Here 
@@ -448,14 +448,14 @@ are the problems that we left unsolved:
 production. Additionally, it can log the incoming requests and responses.
 
 We need a better logging solution which is cheap of resources. I would 
-use something like [**Vector**](https://vector.dev/docs/setup/deployment/roles/)
+use something like [Vector](https://vector.dev/docs/setup/deployment/roles/)
 to transform the logs. It comes with **Vector Remap Language (VRL)** which is 
 great for parsing logs and redacting sensitive information. For the log-sink I 
-recommend [**VictoriaLogs**](https://victoriametrics.com/products/victorialogs/),
+recommend [VictoriaLogs](https://victoriametrics.com/products/victorialogs/),
 it has great ingestion capabilities of different log formats and pairs pretty 
 well with Vector.
 
-2. We need to move configuration management from **viper** to [**koanf**](https://github.com/knadh/koanf). 
+2. We need to move configuration management from **viper** to [koanf](https://github.com/knadh/koanf). 
 It is a newer library from the Zerodha team that has cleaner syntax, and does not 
 bloat up your final compiled binary by adding in all kinds of parsers even if 
 you don't need them. It is also free of [data races that occur in viper.](https://github.com/spf13/viper/issues/174)
@@ -500,7 +500,7 @@ in DB schema as well. Here's a [suggested schema.](https://www.better-auth.com/d
 
 8. Apart from these, there are a few [open issues.](https://github.com/Infinite-Sum-Games/anokha-2025-backend/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen)
 
-## Closing Thoughts
+# Closing Thoughts
 
 We tried do the best with what we had within the time we were given. This is 
 probably our best work yet. We hope that you would take up the codebase and 

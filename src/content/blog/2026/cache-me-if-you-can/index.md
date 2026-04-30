@@ -4,7 +4,7 @@ description: ""
 date: "April 29 2026"
 ---
 
-## The Failure You Don't See Coming
+# The Failure You Don't See Coming
 
 The incident starts ... innocently.
 
@@ -26,7 +26,7 @@ The cache did exactly what you programmed it to do and this is what makes
 caching deceptively difficult to pull off! It was never just about storing 
 data - it was about controlling inconsistency under traffic.
 
-## Mental Model of Caching
+# Mental Model of Caching
 
 I think most discussions about caching are fragmented between what TTL to use, 
 whether to use `redis` or `memcached` and whether to just cache everything.
@@ -37,7 +37,7 @@ A more useful model is to think about caching along two orthogonal axes:
 
 ![cache-axes-diagram](https://w2tkg6h17v.ufs.sh/f/328EZ2MyU1ulkxKbBmxuCVuZXEw7GhgMebfqlKWrcoPDaJj3)
 
-#### Axis X: Write Path (aka where does truth flow)
+## Axis X: Write Path (aka where does truth flow)
 Your write path determines how data moves between your cache and database.
 
 On one end of the spectrum you have **write-through** where every write updates 
@@ -58,9 +58,9 @@ While both strategies work on a sunny day, on a rainy day they diverge:
 You are not choosing the better method. You are only choosing your preferred 
 failure mode.
 
-#### Axis Y: Read Path (aka when data stops being valid)
+## Axis Y: Read Path (aka when data stops being valid)
 
-#### The Interaction Matters
+## The Interaction Matters
 Most cache bugs don't come from picking up the wrong point on one axis. They 
 come from examined interactions between the two.
 
@@ -88,12 +88,12 @@ Questions to ask here would be:
 Once you start seeing it this way, things like `stampede prevention`, `TTL jitter` and
 `singleflight` become implementation details.
 
-## Pros and Cons of the Cache Write Strategies
+# Pros and Cons of the Cache Write Strategies
 
 ![cache-write-patterns](https://w2tkg6h17v.ufs.sh/f/328EZ2MyU1ulJ9P9b5LId16n7FPkfzygV8oEmTQtJweNU9cA)
 
 
-## Time-To-Live and Invalidation
+# Time-To-Live and Invalidation
 
 At first glance, TTL looks like the simplest solution to cache invalidation. 
 Set an expiry and let time handle the correctness.
@@ -107,7 +107,7 @@ In practice however, TTL is not a strategy but a fallback mechanism for uncertai
 You use TTL when you don't know exactly when data changes or when it's too 
 expensive to track every change.
 
-#### What TTL Actually Does
+## What TTL Actually Does
 TTL does not guarantee freshness. It guarantees **bounded staleness.** When you 
 are setting a TTL for 60 seconds, the idea is as follows
 
@@ -118,7 +118,7 @@ This data is fresh for 60 seconds
 We are willing to serve data that may be upto 60 seconds stale
 ```
 
-#### Where TTL Breaks Down
+## Where TTL Breaks Down
 1. **Synchronized Expiry**  
 If many keys share the same TTL, they tend to expire together. This creates
 bursty load patterns:
@@ -147,7 +147,7 @@ data changes immediately after a cache set:
 This is acceptable for some domains like product catalog but unacceptable 
 for pricing changes and permission-altering systems.
 
-## Cache Stampedes
+# Cache Stampedes
 
 ```bash
 # Stampede scenario
@@ -163,7 +163,7 @@ Cache systems optimize for steady stage but nothing for transition states like
 Every request independently decides to recompute on cache misses. Your cache 
 effectively becomes a load multiplier with a retry storm.
 
-#### Mitigation Strategies
+## Mitigation Strategies
 
 1. **Request Coalescing aka Singleflight**
 
@@ -225,8 +225,8 @@ use this for user lookups or feature flags. The trade-off is that you require
 careful invalidation and you risk caching a temporary absence state.
 
 
-## Some Examples in Production
-#### Example 1: User Profile Service
+# Some Examples in Production
+## Example 1: User Profile Service
 
 - Use a read-through cache with explicit invalidation + TTL
 
@@ -236,7 +236,7 @@ careful invalidation and you risk caching a temporary absence state.
   except the user to whom the profile belongs to. You can set a cookie flag for 
   this particular user's request to directly hit the DB.
 
-#### Example 2: Product Catalog in eCommerce
+## Example 2: Product Catalog in eCommerce
 
 - Use a stale-while revalidating with long TTLs
 
@@ -248,7 +248,7 @@ cache quickly so that it reflects fast. Cache is evicted on write immediately.
 - But here, we need to prioritize serving and then slowly warming up the 
 correctness in the background. There is no cache eviction but overwrite.
 
-#### Example 3: High-Frequency Counters
+## Example 3: High-Frequency Counters
 
 - Use a write-behind cache with batch writes to DB
 
@@ -261,7 +261,7 @@ triggers periodically and must be idempotent to avoid duplicate.
 - Duplicate updates in the case of counters can be a very scary situation  
 `x becoming 4x instead of 2x`
 
-#### Example 4: Auth / Permission Systems
+## Example 4: Auth / Permission Systems
 
 - Use a short TTL with explicit invalidation strategy
 
@@ -270,7 +270,7 @@ triggers periodically and must be idempotent to avoid duplicate.
 - Systems like this have high cache churn and increase backend load so you need 
 to look for tools and technologies to combat that.
 
-## Common Pitfalls to Avoid 
+# Common Pitfalls to Avoid 
 
 - Cache is not a source of truth. The DB is the source of truth.
 - Don't use TTL blindly as it leads to subtle bugs.
@@ -283,7 +283,7 @@ to look for tools and technologies to combat that.
 - Don't use **write-behind** caching for critical data. This is how you lose 
   data without noticing.
 
-## Conclusion
+# Conclusion
 
 Before you introduce caches into your system, always make sure to answer the 
 following questions:

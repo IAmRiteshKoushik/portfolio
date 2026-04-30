@@ -4,7 +4,7 @@ description: ""
 date: "Mar 11 2025"
 ---
 
-## Setting the Context
+# Setting the Context
 
 Recently, on February 28th, 2025; my university concluded it's first open-source
 fest - [ACM Amrita's Winter of Code : S1](https://woc-leaderboard.vercel.app).
@@ -14,7 +14,7 @@ contributors with a bounty total amassing upto 7k over a span of two months.
 In this article, I am going to dive into the tech behind our `leaderboard` and
 `bounty-dispatcher` and how it operated for 2 months at 0 infrastructure-cost!
 
-## Why A Bounty Program ?
+# Why A Bounty Program ?
 
 When [Ashwin Narayanan S](https://github.com/Ashrockzzz2003) and
 [Abhinav Ramakrishnan](https://github.com/Abhinav-ark/) invited me to join the
@@ -26,7 +26,7 @@ all contributors as opposed to keeping it only for the top 3 finishers.
 Thus, came the challenge of maintaining a leaderboard, updating it LIVE,
 dispatching bounty points to each contributor and keeping it cost-effective.
 
-## Tools in The Toolbox
+# Tools in The Toolbox
 
 1. With previous experience in the MERN stack and having dealt with [Next.js]()
 codebases, it was a no-brainer that the website would be built with it and
@@ -79,7 +79,7 @@ capture all bounties and update them in the database.
 
 ![Cloudflare](https://cf-assets.www.cloudflare.com/slt3lc6tev37/51lajZjkeMPRXXEJJSjcVm/de01b00d3bba248d3a833ab7af9fa504/Network_Connectivity_plus_Zero_Trust_Security_Diagram.svg)
 
-## Off to The Code Editors (VSCode / Neovim)
+# Off to The Code Editors (VSCode / Neovim)
 
 - For the UI, we quickly laid the scope that we would only build a leaderboard
 and display all the projects. There would not be anything fancy other than a
@@ -89,7 +89,7 @@ handling authentication and session management inside of `Next.js`
 - The database schema was whipped and migrated in less than 20 minutes using
 `Prisma`, with enough seed-data to help out with all our testing procedures.
 
-## GitHub WebHooks to Dispatch Bounty, Handle Issues and Pull Requests
+# GitHub WebHooks to Dispatch Bounty, Handle Issues and Pull Requests
 
 With our fallback plan being a `google-sheet` where each maintainer manually
 records the bounty and we update the database every night to display the updated
@@ -146,7 +146,7 @@ with an hour.
 
 And then, distaster struck ...
 
-## Meta didn't add support for Recoil in Next.js v15 :((
+# Meta didn't add support for Recoil in Next.js v15 :((
 
 We had previously worked with `recoil` the popular and React friendly
 state management library by `Meta (prev. Facebook)` and were incredibly confident
@@ -171,7 +171,7 @@ notification during the early hours of the day.
 
 Inner peace.
 
-## Footnotes for our Successors
+# Footnotes for our Successors
 
 ![Torch Passing Image](https://media.istockphoto.com/id/1485095544/vector/torch-relay.jpg?s=612x612&w=0&k=20&c=8PvRV1RPMmww0Yl-37bKgRq1ofr-tYMqiwF6yKmKSWk=)
 

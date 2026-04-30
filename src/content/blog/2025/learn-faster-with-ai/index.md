@@ -4,7 +4,7 @@ description: ""
 date: "August 03 2025"
 ---
 
-## Overview
+# Overview
 I am writing this blog to jot down a couple of pointers to learn properly and deeply 
 in this age of AI. While there are many lists on the internet that address
 this, I find the following to have worked the best for me as a student and as a 
@@ -12,14 +12,14 @@ programmer. This goes beyond mindlessly consuming content of books, blogs,
 youtube videos. It is my attempt to streamline resources into a single consumable 
 pipeline which makes it easy to extract knowledge and add value.
 
-## Why Are You Learning ?
+# Why Are You Learning ?
 Learning for most people has become a form of mental masturbation. It is 
 comparable to the dopamine hits that you get from scrolling on your phone except
 it makes you feel that you have learned something. The reality is that you would 
 forget the intricate details of it by tomorrow and only remember enough to 
 name-drop it during conversations.
 
-## Draw the Outline, Build the Project
+# Draw the Outline, Build the Project
 Often times we choose to learn something new as an exploratory measure without 
 having it connect to any of our existing skills, needs or goals. Learning 
 accelerations come only to those, who have a deeper meaning and clarity behind 
@@ -59,7 +59,7 @@ In short, lay your outlines properly! Write them down as 3 goals you have for a
 project and anything and everything that does not supplement those 3 goals 
 strongly, do not require your attention!
 
-## How to Optimize for Pattern Recognition
+# How to Optimize for Pattern Recognition
 > We recognize patterns only when we are looking for them. 
 
 This is often an overlooked aspect of learning but we learn best when we are 
@@ -85,7 +85,7 @@ and then put it away as your consume silently before getting back, sharing your
 learning and progress and hunting for the next set of questions. Make sure to 
 never ask for complete answers directly. Resources and snippets only.
 
-## The Fortnight Learner
+# The Fortnight Learner
 
 Learning happens best when there is only one thing to learn. Fragmented focus 
 has always lead to distractions. However, you do need to take breaks, try out 
@@ -112,7 +112,7 @@ following for you:
 2. A discipline coach (2 weeks only) 
 3. A study regiment (guardrails of how much diversion you can afford)
 
-## Deploy In The Wild
+# Deploy In The Wild
 
 The second dose of motivation after the initial spurt comes often when you have 
 things that are broken. But not every broken thing needs to be fixed. Our minds 

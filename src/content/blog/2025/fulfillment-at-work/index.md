@@ -17,9 +17,9 @@ and fundamental concepts which are robbing us of our joy at work.
 Believe it or not, the quality of work we produce is directly correlated to the 
 fulfillment we derive from it.
 
-## How to Produce Quality Work
+# How to Produce Quality Work
 
-### 1. We are not selective about our work environments
+## 1. We are not selective about our work environments
 
 We believe that work gets done wherever we can find a power-socket for our 
 laptops; and that is one of **the biggest** modern day fallacies. Work environments 
@@ -31,7 +31,7 @@ then you can either cover the bed with a different cloth to signal your brain to
 not go and lie on it. Alternatively, you can work from a library or a coffee shop
 if that's accessible to you.
 
-### 2. Your timeboxes are not wolverine
+## 2. Your timeboxes are not wolverine
 
 Whenever you sit down to work, visualize that you are creating a shell around your 
 physical space with all distractive elements kept outside. Everytime, you allow 
@@ -53,7 +53,7 @@ patches up these holes. The only drawback is that your energy is not spent
 100% on the task but divided amongst focusing on the task and keeping distractions
 away. Pricey affair I would say!
 
-### 3. Don't delude yourself while preparing schedules
+## 3. Don't delude yourself while preparing schedules
 
 Studies and surveys have shown that humans are most deluded when deciding about how much time 
 they would take to complete a task. If you feel you can do something in 5 hours, 
@@ -81,7 +81,7 @@ after your wake up from sleep.
 - You are bound to miscalculate either ways so you might as well allocate buffers
 and contingency plans into your schedule.
 
-### 4. Build a ritual
+## 4. Build a ritual
 
 Often times, NBA basketball players have a ritual (a set of actions) that they 
 perform before making a free-throw. In layman's terms, performing some mini-tasks
@@ -103,7 +103,7 @@ reaching for a towel after washing your face. You don't think about it,
 your brain doesn't spend energy on it. Otherwise, it takes 
 time for the brain to get into the gear of sitting down and getting to work.
 
-### 5. Focus is not a personality trait
+## 5. Focus is not a personality trait
 
 Just like how your muscles atrophy when you don't use them for long, your ability
 to focus and concentrate undergo the same levels of erosion when not deployed 
@@ -120,7 +120,7 @@ If you cannot sit with yourself in silence for a couple of minutes, then you
 cannot focus on solving a difficult problem by yourself, and feel triggered to 
 doomscroll at the first sight of mild stress.
 
-### 6. We multitask the wrong way
+## 6. We multitask the wrong way
 
 Every single instance of multitasking is essentially a lightning fast switch 
 between different contexts with `serializing` and `deserializing` a cognitive load.
@@ -135,7 +135,7 @@ and non-cognitive workloads.
 
 - Reading blogs and articles in your short gaps of boredom.
 
-### 7. Chill' the nobel way
+## 7. Chill' the nobel way
 
 Relaxing is important. Allow your brain to recuperate from the hardwork it has 
 put in over the hours of deep work. Recalcitrate tasks like meetings, reviews 
@@ -145,7 +145,7 @@ and joining meaningless clubs/committees.
 
 -- Carl Newport
 
-### 8. Avoid the productivity mirage
+## 8. Avoid the productivity mirage
 
 Your brain likes to do loads of shallow, low-value tasks because they require 
 less energy and increase the number of tasks done during the day. However, when 
@@ -160,7 +160,7 @@ Just because an option has "some benefit" doesn't mean it is a good choice.
 Identify the highest ROI tasks and spend your deep-work time blocks exclusively 
 on those.
 
-### 9. End your day, the right way
+## 9. End your day, the right way
 
 Spent the last 15 minutes at the end of your day on crafting the todo-list for 
 the next day rather than squeezing out that last chunk of code.
@@ -170,7 +170,7 @@ and jotted down.
 
 Unwind and go to bed.
 
-## Closing Thoughts
+# Closing Thoughts
 
 The ideas enlisted above may or may not apply to everyone. They are not axiomatic, 
 and are only written to serve as lamposts on your trail. 
