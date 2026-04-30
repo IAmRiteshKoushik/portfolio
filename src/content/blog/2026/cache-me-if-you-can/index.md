@@ -1,7 +1,7 @@
 ---
 title: "Cache Me If You Can: A Primer"
 description: ""
-date: "April 29 2026"
+date: "April 29, 2026"
 ---
 
 # The Failure You Don't See Coming
@@ -15,7 +15,7 @@ All of a sudden you are not handling a 1000 requests, you are handling tens
 of thousands of them.
 
 In a matter of minutes, the connection pool is exhausted and starts throwing 
-`failured to acquire connection with X time`. Timeouts start cascading upstream.
+`failed to acquire connection with X time`. Timeouts start cascading upstream.
 What started as a cache expiry is now a full-blown system outage!
 
 Nothing <u>broke</u>. 
@@ -60,7 +60,6 @@ failure mode.
 
 ## Axis Y: Read Path (aka when data stops being valid)
 
-## The Interaction Matters
 Most cache bugs don't come from picking up the wrong point on one axis. They 
 come from examined interactions between the two.
 
