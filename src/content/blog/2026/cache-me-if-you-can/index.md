@@ -181,8 +181,8 @@ Consider the following cache miss pattern
 
 ```bash
 Instance-A: cache miss -> DB
-Instance-A: cache miss -> DB
-Instance-A: cache miss -> DB
+Instance-B: cache miss -> DB
+Instance-C: cache miss -> DB
 ```
 
 Each instance believes it is responsible for recomputing the value. With 
