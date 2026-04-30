@@ -4,7 +4,7 @@ description: ""
 date: "August 17 2025"
 ---
 
-## Setting the Context
+# Setting the Context
 
 With the release of Gemini CLI and Claude Code, AI-code assistants are now 
 right within the grasp of your terminal. I have been a relucntant user of AI 
@@ -21,7 +21,7 @@ quite skeptical about them.
 humans learn from `time under tension` and productivity does not play well in 
 this regard where time needs to be spent for learning.
 
-## So, why the Switch ?
+# So, why the Switch ?
 
 Lately, I have started feeling that I am not as productive as my co-workers. I 
 have come across individuals who are able to balance between not sacrificing 
@@ -35,7 +35,7 @@ by ForrestKnight. So, in this blog, I am going to summarize some of my key
 learnings surrounding this paradigm and how I have started coding better and 
 faster with AI.
 
-## Planning and Architecture
+# Planning and Architecture
 The conventional way to start with a project or developing a new feature for an 
 existing project is to: 
 
@@ -80,7 +80,7 @@ who says "yes" to everything you throw at it. You need to carefully structure
 your prompts -- asking it to be critical of the ideas and leave certain things 
 open-ended.
 
-## Project Setup and Scaffolding
+# Project Setup and Scaffolding
 
 Let's talk about tools such as [lovable.ai](https://lovable.dev/), 
 [bolt.new](https://bolt.new/), [v0.app](https://v0.app/) which claim to be a 
@@ -100,7 +100,7 @@ beyond your DEMO projects / university projects, then it is time to think again.
 
 Avoid plugging in prouduction services into your AI.
 
-## Actually Writing Code
+# Actually Writing Code
 
 In the context of actually writing code, we have [cursor](https://cursor.com/), 
 [vscode](https://code.visualstudio.com/), [zed.ai](https://zed.dev/) which are 
@@ -157,7 +157,7 @@ your coding agent with explicit instructions on now to modify these. Now, as you
 finish each task, you can check them off at `tasks.md` and remove it's 
 description from `problems.md`.
 
-## Tests and Debugging
+# Tests and Debugging
 
 Let's face it, nobody really likes to begin writing test suites from scratch but 
 often times, we do like extending them to increase coverage. Allowing AI to 
@@ -175,7 +175,7 @@ Coming to the debugging part, developers can ask AI to run comamnds like
 AI would have direct access to the stack trace and can suggest tips as part of a 
 debugging workflow.
 
-## Leveraging Model Context Protocol (MCP)
+# Leveraging Model Context Protocol (MCP)
 
 Model Context Protocol has been an amazing addition to the AI-developers' 
 toolbox. With this protcol, we can standardize access to different tools across 
@@ -210,7 +210,7 @@ logs with incidents using Prometheus MCP
 Either work in READ-ONLY mode or have backups and work on them instead of 
 querying data stores.
 
-## Documentation
+# Documentation
 
 If you are one of those developers who do not like to write documentation, you 
 can always outsource it to AI. Sometimes, you need to write JavaDoc or JsDoc 
@@ -219,7 +219,7 @@ is just comments which need very little testing.
 
 The human in the loop proof-reads it and then passes it off.
 
-## Dockerfiles, Terraform Configs, k8s Manifests and GitHub Actions
+# Dockerfiles, Terraform Configs, k8s Manifests and GitHub Actions
 
 Often times, writing configurations by hand is tedious and getting a boilerplate
 to work out of is great. Now, bear in mind that if you are absolutely new to 
@@ -235,7 +235,7 @@ asking the LLM to explain it line by line is quite helpful.
 are breaking into a new technology and need a simple and dirty config that 
 just works out of the box.
 
-## API Testing and Security with AI
+# API Testing and Security with AI
 
 For testing your API using [Postman](https://www.postman.com/downloads/) or 
 [Bruno](https://www.usebruno.com/), you can pass in your API schema and 
@@ -257,7 +257,7 @@ vulnerabilities. Not every company can hire a dedicated cyber-ops team. These
 tools come in handy by allowing teams to have some level of security analysis 
 going on, on their codebases.
 
-## Closing Thoughts
+# Closing Thoughts
 
 Let's sit down for a moment and acknowledge that skill atrophy is real. If you 
 are using AI to write all of your code and your tests and your docs, then you 
@@ -275,7 +275,7 @@ also point out certain patterns as dangerous and suggest a refactor but you and
 your team perfectly understand the context behind writing something a certain 
 way despite it's unconventional-ness.
 
-## Enough Talk! Off to The Keyboard.
+# Enough Talk! Off to The Keyboard.
 
 The dev world has changed, whether we appreciate it or not. It is not about AI 
 taking away the jobs of programmers. It is about recruiters prioritize developers
