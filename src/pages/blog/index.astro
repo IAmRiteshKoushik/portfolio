@@ -1,59 +1,115 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
+import { getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
-import ArrowCard from "@components/ArrowCard.astro";
 import { BLOG } from "@consts";
 
-const data = (await getCollection("blog"))
-  .filter(post => !post.data.draft)
+const posts = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-  
-type Acc = {
-  [year: string]: CollectionEntry<"blog">[];
-}
 
-const posts = data.reduce((acc: Acc, post) => {
-    const year = post.data.date.getFullYear().toString();
-    if (!acc[year]) {
-      acc[year] = [];
-    }
-    acc[year].push(post);
-    return acc;
-  }, {});
-
-const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a)); 
+const formatBlogDate = (date: Date) => {
+  const base = date.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+  const [day, month, year] = base.split(" ");
+  return `${day} ${month}, ${year}`;
+};
 ---
 
 <PageLayout title={BLOG.TITLE} description={BLOG.DESCRIPTION}>
   <Container>
-    <div class="space-y-5">
-      <div class="animate font-semibold text-black dark:text-white">
-        My Blogs
-      </div>
-      <div class="animate text-black dark:text-white">
-        {BLOG.DESCRIPTION}
-      </div>
-      <div class="space-y-4">
-        {years.map(year => (
-          <section class="animate space-y-4">
-            <div class="font-semibold text-black dark:text-white">
-              {year}
-            </div>
-            <div>
-              <ul class="flex flex-col gap-4">
-                {
-                  posts[year].map((post) => (
-                    <li>
-                      <ArrowCard entry={post}/>
-                    </li>
-                  ))
-                }
-              </ul>
-            </div>
-          </section>
+    <section class="animate blog-index">
+      <h1 class="blog-index-title">Blogs</h1>
+      <p class="blog-index-description">{BLOG.DESCRIPTION}</p>
+
+      <ul class="blog-index-list">
+        {posts.map((post) => (
+          <li class="blog-index-row">
+            <time class="blog-index-date" datetime={post.data.date.toISOString()}>
+              {formatBlogDate(post.data.date)}
+            </time>
+            <a class="blog-index-link" href={`/blog/${post.slug}/`}>
+              {post.data.title}
+            </a>
+          </li>
         ))}
-      </div>
-    </div>
+      </ul>
+    </section>
   </Container>
 </PageLayout>
+
+<style>
+  .blog-index {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .blog-index-title {
+    margin: 0;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.05;
+  }
+
+  .blog-index-description {
+    margin: 0;
+    color: var(--muted);
+    max-width: 68ch;
+    line-height: 1.6;
+  }
+
+  .blog-index-list {
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .blog-index-row {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    align-items: baseline;
+    column-gap: 1.2rem;
+    padding: 0.95rem 0.65rem;
+    transition: background-color 180ms ease;
+  }
+
+  .blog-index-row + .blog-index-row {
+    border-top: 1px solid var(--line);
+  }
+
+  .blog-index-row:hover {
+    background: color-mix(in srgb, var(--text) 6%, transparent);
+  }
+
+  .blog-index-date {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--muted);
+    font-size: 0.82rem;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+
+  .blog-index-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: clamp(0.9rem, 1.02vw, 1.04rem);
+    line-height: 1.35;
+    font-weight: 560;
+  }
+
+  .blog-index-link:hover {
+    color: var(--accent-text);
+  }
+
+  @media (max-width: 640px) {
+    .blog-index-row {
+      grid-template-columns: 1fr;
+      row-gap: 0.4rem;
+    }
+  }
+</style>

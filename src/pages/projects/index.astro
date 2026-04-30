@@ -2,29 +2,114 @@
 import { getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
-import ArrowCard from "@components/ArrowCard.astro";
 import { PROJECTS } from "@consts";
 
 const projects = (await getCollection("projects"))
-  .filter(project => !project.data.draft)
+  .filter((project) => !project.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const formatProjectDate = (date: Date) => {
+  const base = date.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+  const [day, month, year] = base.split(" ");
+  return `${day} ${month}, ${year}`;
+};
 ---
 
 <PageLayout title={PROJECTS.TITLE} description={PROJECTS.DESCRIPTION}>
   <Container>
-    <div class="space-y-10">
-      <div class="animate font-semibold text-black dark:text-white">
-        My Projects
-      </div>
-      <ul class="animate flex flex-col gap-4">
-        {
-          projects.map((project) => (
-            <li>
-              <ArrowCard entry={project}/>
-            </li>
-          ))
-        }
+    <section class="animate projects-index">
+      <h1 class="projects-index-title">Projects</h1>
+      <p class="projects-index-description">{PROJECTS.DESCRIPTION}</p>
+
+      <ul class="projects-index-list">
+        {projects.map((project) => (
+          <li class="projects-index-row">
+            <time class="projects-index-date" datetime={project.data.date.toISOString()}>
+              {formatProjectDate(project.data.date)}
+            </time>
+            <a class="projects-index-link" href={`/projects/${project.slug}/`}>
+              {project.data.title}
+            </a>
+          </li>
+        ))}
       </ul>
-    </div>
+    </section>
   </Container>
 </PageLayout>
+
+<style>
+  .projects-index {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .projects-index-title {
+    margin: 0;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.05;
+  }
+
+  .projects-index-description {
+    margin: 0;
+    color: var(--muted);
+    max-width: 68ch;
+    line-height: 1.6;
+  }
+
+  .projects-index-list {
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .projects-index-row {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    align-items: baseline;
+    column-gap: 1.2rem;
+    padding: 0.95rem 0.65rem;
+    transition: background-color 180ms ease;
+  }
+
+  .projects-index-row + .projects-index-row {
+    border-top: 1px solid var(--line);
+  }
+
+  .projects-index-row:hover {
+    background: color-mix(in srgb, var(--text) 6%, transparent);
+  }
+
+  .projects-index-date {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--muted);
+    font-size: 0.82rem;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+
+  .projects-index-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: clamp(0.9rem, 1.02vw, 1.04rem);
+    line-height: 1.35;
+    font-weight: 560;
+  }
+
+  .projects-index-link:hover {
+    color: var(--accent-text);
+  }
+
+  @media (max-width: 640px) {
+    .projects-index-row {
+      grid-template-columns: 1fr;
+      row-gap: 0.4rem;
+    }
+  }
+</style>
