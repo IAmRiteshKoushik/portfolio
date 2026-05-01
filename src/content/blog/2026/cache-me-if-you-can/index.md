@@ -206,7 +206,7 @@ again in 2-3 seconds as that's your predicted time to finish computation.
 If your system is a high-read and low-criticality system then this is the most 
 resilient default setting.
 
-4. **TTL Jitter:** Stampedes after often synchronized If many keys share the same TTL, it creates 
+4. **TTL Jitter:** Stampedes are often synchronized. If many keys share the same TTL, it creates 
 a coordinated load spike. Adding randomness to the TTL spreads the load. 
 
 ```python
