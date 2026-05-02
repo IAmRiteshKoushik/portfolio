@@ -2,6 +2,7 @@
 title: "Cache Me If You Can: A Primer"
 description: "A simple primer on caching, its tradeoffs, and when it makes sense."
 date: "April 29, 2026"
+image: "https://w2tkg6h17v.ufs.sh/f/328EZ2MyU1ulu7icBndhYcmfV0rkMSjBq39pFsKLnDQ7PX2G"
 ---
 
 # The Failure You Don't See Coming
