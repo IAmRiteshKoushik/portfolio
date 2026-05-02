@@ -1,6 +1,6 @@
 ---
 title: "The Anokha Runtime - 2026 Edition"
-description: ""
+description: "A deep dive into the Anokha Runtime and how it works under the hood."
 date: "January 17 2026"
 ---
 

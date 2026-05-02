@@ -1,6 +1,6 @@
 ---
 title: "Cache Me If You Can: A Primer"
-description: ""
+description: "A simple primer on caching, its tradeoffs, and when it makes sense."
 date: "April 29, 2026"
 ---
 
