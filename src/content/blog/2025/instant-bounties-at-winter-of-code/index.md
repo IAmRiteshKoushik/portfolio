@@ -1,6 +1,6 @@
 ---
 title: "Blazingly Fast Bounties at Winter of Code!"
-description: ""
+description: "How we built a fast bounty platform for Winter of Code and the tradeoffs behind it."
 date: "Mar 11 2025"
 ---
 

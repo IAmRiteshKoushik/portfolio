@@ -1,6 +1,6 @@
 ---
 title: "How to Setup Google Fonts in Electron Apps"
-description: ""
+description: "A practical guide to setting up Google Fonts correctly in Electron apps."
 date: "November 08 2025"
 ---
 
@@ -150,4 +150,3 @@ function App(): React.JSX.Element {
 
 export default App
 ```
-

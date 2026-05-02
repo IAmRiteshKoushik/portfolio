@@ -1,6 +1,6 @@
 ---
 title: "Achieving Fullfilment at Work"
-description: ""
+description: "A reflection on meaningful work, sustainable growth, and avoiding empty productivity."
 date: "August 18 2025"
 ---
 
