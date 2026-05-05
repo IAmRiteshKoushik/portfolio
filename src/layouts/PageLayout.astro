@@ -11,12 +11,15 @@ type Props = {
 };
 
 const { title, description, image } = Astro.props;
+const documentTitle = title?.trim()
+  ? `${title} | ${SITE.NAME}`
+  : SITE.NAME;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <Head title={`${title} | ${SITE.NAME}`} description={description} image={image} />
+    <Head title={documentTitle} description={description} image={image} />
   </head>
   <body>
     <Header />

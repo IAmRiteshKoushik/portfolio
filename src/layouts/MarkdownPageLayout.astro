@@ -1,0 +1,44 @@
+---
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+
+type Props = {
+  title: string;
+  description: string;
+  pageTitle?: string;
+};
+
+const { title, description, pageTitle = title } = Astro.props;
+---
+
+<PageLayout title={title} description={description}>
+  <Container>
+    <section class="markdown-page">
+      <h1 class="animate markdown-page-title">{pageTitle}</h1>
+      <article class="animate markdown-page-content">
+        <slot />
+      </article>
+    </section>
+  </Container>
+</PageLayout>
+
+<style>
+  .markdown-page {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .markdown-page-title {
+    margin: 0;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.05;
+    color: var(--text);
+  }
+
+  .markdown-page-content {
+    max-width: 68ch;
+  }
+</style>
