@@ -1,6 +1,6 @@
 ---
 company: "ACM's Season of Code, Amrita University - Coimbatore, India"
-role: "Full-Stack Engineer and Organizer"
+role: "Software Developer - TypeScript"
 dateStart: "07/29/2024"
 dateEnd: "10/29/2025"
 ---
