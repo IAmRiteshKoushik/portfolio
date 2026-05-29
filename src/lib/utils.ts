@@ -20,9 +20,13 @@ export function readingTime(html: string) {
   return `${readingTimeMinutes} min read`;
 }
 
-export function dateRange(startDate: Date, endDate?: Date | string): string {
-  const startMonth = startDate.toLocaleString("default", { month: "short" });
-  const startYear = startDate.getFullYear();
+export function dateRange(startDate: Date | string, endDate?: Date | string): string {
+  let startMonth: any
+  let startYear: any
+  if (typeof startDate !== "string") {
+    startMonth = startDate.toLocaleString("default", { month: "short" });
+    startYear = startDate.getFullYear();
+  }
 
   let endMonth: any;
   let endYear: any;
@@ -35,8 +39,6 @@ export function dateRange(startDate: Date, endDate?: Date | string): string {
       endYear = endDate.getFullYear().toString();
     }
   }
-
-  console.log(startMonth);
 
   return `${startMonth}, ${startYear} - ${endMonth} ${endYear}`;
 }
