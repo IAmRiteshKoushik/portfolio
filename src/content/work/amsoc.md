@@ -1,13 +1,12 @@
 ---
-company: "ACM's Season of Code, Amrita University - CBE, India"
+company: "ACM's Season of Code, Amrita University - Coimbatore, India"
 role: "Full-Stack Engineer and Organizer"
-dateStart: "10/29/2024"
-dateEnd: "07/29/2025"
+dateStart: "07/29/2024"
+dateEnd: "10/29/2025"
 ---
 
 [Website](https://amsoc.vercel.app/) | 
-[Winter of Code, 24' - Blog](blog/instant-bounties-at-winter-of-code) | 
-[Winter of Code, 25'  - Blog](http://localhost:4321/blog/amsoc-25-technical-deepdive) 
+[Winter of Code, 24' - Blog](blog/instant-bounties-at-winter-of-code)
 
 Worked as a full-stack engineer for building the platform to conduct 
 open-source programs with bounties to encourage student participation and 
