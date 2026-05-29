@@ -11,7 +11,15 @@ I read papers surrounding storage engines, distributed systems and
 vector databases as those are the topics that currently capture my interest.
 Would love to explore newer domains and hear your suggestions.
 
+## Completed Reading
+
 - [The Google File System](https://research.google/pubs/the-google-file-system/)
+- [JSON Web Token](https://www.google.com/search?q=https://www.ietf.org/rfc/rfc7519.pdf)
+
+---
+
+## In Queue
+
 - [Ceph: A Scalable, High-Performance Distributed File System](https://www.usenix.org/legacy/events/osdi06/tech/full_papers/weil/weil.pdf) `Queued`
 - [Epidemic Algorithms for Replicated Database Maintenance](https://github.com/papers-we-love/papers-we-love/blob/main/distributed_systems/epidemic-algorithms-for-replicated-database-maintenance.pdf) `Queued`
 - [Time, Clocks, and the Ordering of Events in a Distributed System](https://www.google.com/search?q=https://www.microsoft.com/en-us/research/uploads/prod/2016/12/Time-Clocks-and-the-Ordering-of-Events-in-a-Distributed-System.pdf) `Queued`
@@ -55,6 +63,5 @@ Would love to explore newer domains and hear your suggestions.
 - [Consistency Tradeoffs in Modern Distributed Database System Design](https://www.google.com/search?q=https://www.cs.umd.edu/~abadi/papers/abadi-ieee2012.pdf) `Queued`
 - [Life Beyond Distributed Transactions](https://www.google.com/search?q=https://cidrdb.org/cidr2007/papers/cidr07p11.pdf) `Queued`
 - [The Transport Layer Security Protocol Version 1.3](https://www.google.com/search?q=https://www.ietf.org/rfc/rfc8446.pdf) `Queued`
-- [JSON Web Token](https://www.google.com/search?q=https://www.ietf.org/rfc/rfc7519.pdf) `Queued`
 - [The OAuth 2.0 Authorization Framework](https://www.google.com/search?q=https://www.ietf.org/rfc/rfc6749.pdf) `Queued`
 - [Role-Based Access Control Models](https://www.google.com/search?q=https://profsandhu.com/journals/computer/i96rbac.pdf) `Queued`
