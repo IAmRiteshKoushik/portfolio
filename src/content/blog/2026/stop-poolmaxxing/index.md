@@ -132,7 +132,7 @@ moves on to handle other web requests.
 - There is heavy utilization of context managers to manage pool state and prevent 
 leaks.
 
-# What should be my pool size ?
+# What to calculate an optimal pool size ?
 
 A formula from the [PostgreSQL docs](https://wiki.postgresql.org/wiki/Number_Of_Database_Connections) that has held up the test of time -
 
