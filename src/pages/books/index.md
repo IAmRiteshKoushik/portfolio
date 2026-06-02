@@ -18,10 +18,10 @@ my amusement.
 - [The Unicorn Project](https://www.goodreads.com/en/book/show/44333183-the-unicorn-project)
 - [The Accidental CTO by Subash Chaudhary](https://www.goodreads.com/book/show/241929607-the-accidental-cto)
 - [Atomic Habits](https://www.goodreads.com/book/show/40121378-atomic-habits)
-- []()
+- [Shoe Dog: A Memoir By The Creator of NIKE](https://www.goodreads.com/en/book/show/27220736-shoe-dog)
 
 ---
 
 ## In Queue
 
-- [Surrounded by Idiots](https://www.goodreads.com/book/show/39101777-surrounded-by-idiots) `Queued`
+- [Surrounded by Idiots](https://www.goodreads.com/book/show/39101777-surrounded-by-idiots)
