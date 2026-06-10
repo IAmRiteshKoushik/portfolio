@@ -14,6 +14,7 @@ my amusement.
 
 The list has been ordered from latest to oldest.
 
+- [Master of Doom: How Two Guys Created An Empire and Transformed Pop Culture](https://www.goodreads.com/book/show/222146.Masters_of_Doom)
 - [Shoe Dog: A Memoir By The Creator of NIKE](https://www.goodreads.com/en/book/show/27220736-shoe-dog)
 - [The Accidental CTO by Subash Chaudhary](https://www.goodreads.com/book/show/241929607-the-accidental-cto)
 - [A Good Girl's Guide to Murder](https://www.goodreads.com/book/show/40916679-a-good-girl-s-guide-to-murder)
