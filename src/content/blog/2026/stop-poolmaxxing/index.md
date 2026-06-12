@@ -74,7 +74,7 @@ asynchronous I/O, connection pools like [node-postgres](https://node-postgres.co
 around non-blocking async queues.
 
 - The allocation is event driven. When an async block of code requires a DB 
-operation, it makes a call to the pool. Now, as the 
+operation, it makes a call to the pool.
 
 - If all connections in the pool are busy executing I/O, then Node.js pushes 
 incoming database requests into an `internal memory queue`.
