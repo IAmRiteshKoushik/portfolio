@@ -2,6 +2,7 @@
 title: "Achieving Fullfilment at Work"
 description: "A reflection on meaningful work, sustainable growth, and avoiding empty productivity."
 date: "August 18 2025"
+draft: false
 ---
 
 Have you ever wondered why your friend gets to push high quality work within 

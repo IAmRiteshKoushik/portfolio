@@ -2,6 +2,7 @@
 title: "How to Setup Google Fonts in Electron Apps"
 description: "A practical guide to setting up Google Fonts correctly in Electron apps."
 date: "November 08 2025"
+draft: false
 ---
 
 As a developer, adding custom fonts in your Electron.js applications always 

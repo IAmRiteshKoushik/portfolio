@@ -2,6 +2,7 @@
 title: "Terraforming the Software Development Landscape with AI"
 description: "A practical look at using AI to plan, build, debug, and learn software better."
 date: "August 17 2025"
+draft: false
 ---
 
 # Setting the Context

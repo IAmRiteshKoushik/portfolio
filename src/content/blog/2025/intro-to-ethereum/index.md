@@ -2,6 +2,7 @@
 title: "Bytecode to World State: A Dummies Guide to Ethereum"
 description: "A beginner-friendly guide to how Ethereum executes code and updates state."
 date: "November 11 2025"
+draft: false
 ---
 
 # Quick Recap of Blockchains

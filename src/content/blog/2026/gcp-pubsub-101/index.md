@@ -1,8 +1,9 @@
 ---
-title: "The Missing Beginner's Guide to GCP Pub/Sub with Golang"
+title: "The Missing Guide for Beginner's to GCP Pub/Sub with Go"
 description: "Hands-on introduction to GCP Pub/Sub completely on localhost"
 date: "June 11, 2026"
 image: "https://w2tkg6h17v.ufs.sh/f/328EZ2MyU1ul2PMxo6WEwT6kfus1Vyd3Y98nxOXiQS0tKGMJ"
+draft: true
 ---
 
 # Introduction

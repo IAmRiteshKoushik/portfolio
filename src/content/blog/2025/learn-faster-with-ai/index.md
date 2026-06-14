@@ -2,6 +2,7 @@
 title: "Learning Quickly and Deeply (with AI)"
 description: "How to use AI to learn faster without sacrificing depth or understanding."
 date: "August 03 2025"
+draft: false
 ---
 
 # Overview

@@ -3,6 +3,7 @@ title: "Stop Pool-Maxxing Your Database"
 description: "A simple guide to understanding connection pooling as a backend engineer"
 date: "May 29, 2026"
 image: "https://w2tkg6h17v.ufs.sh/f/328EZ2MyU1ulucbhXydhYcmfV0rkMSjBq39pFsKLnDQ7PX2G"
+draft: false
 ---
 
 If naming and caching are the 2 most difficult tasks in software engineering, 
