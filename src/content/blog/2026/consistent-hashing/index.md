@@ -3,7 +3,7 @@ title: "Why We Put Servers on A Ring"
 description: "Expanding capacity is easy until your hashing mechanism gets in the way"
 date: "June 15, 2026"
 image: "https://w2tkg6h17v.ufs.sh/f/328EZ2MyU1ul2CT5GzWEwT6kfus1Vyd3Y98nxOXiQS0tKGMJ"
-draft: false
+draft: true
 ---
 
 Imagine you have a <u>file storage unit</u> that is partitioned into three different servers.
