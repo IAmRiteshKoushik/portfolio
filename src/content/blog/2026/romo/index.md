@@ -5,7 +5,8 @@ date: "June 17, 2026"
 draft: false
 ---
 
-It's been a little 2 months since my rant about [shipping nothing in the age of AI.](/blog/2026/shipping-nothing-in-the-age-of-ai) This blog is going to be a self-evaluation piece along with a 
+It's been a little 2 months since my rant about [shipping nothing in the age of AI.](/blog/2026/shipping-nothing-in-the-age-of-ai) 
+This blog is going to be a self-evaluation piece along with a 
 few things that I learned along the way. I still find myself going back to my 
 previous blog because it serves as a north star in the labyrinth of living in 
 2026. 
@@ -68,7 +69,7 @@ fumes and being on the bleeding edge of everything.
 notes of things and that meant I was experiencing things in a shallow manner. 
 Interestingly, I also realized that note taking allowed me three things
 
-    1. My right hand is holding the pend and not sitting on the arrow keys to 
+    1. My right hand is holding the pen and not sitting on the arrow keys to 
     fast-forward the long form youtube video that I am watching.
     2. Taking notes means naturally slowing things down to your writing speed 
     and taking pauses. This means that I am consuming every chunk of content 
