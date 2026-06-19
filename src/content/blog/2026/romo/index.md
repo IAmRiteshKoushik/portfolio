@@ -11,7 +11,7 @@ few things that I learned along the way. I still find myself going back to my
 previous blog because it serves as a north star in the labyrinth of living in 
 2026. 
 
-Overtime I realized that writing it all down only and publishing it off as a 
+Overtime I realized that writing it all down and publishing it off as a 
 blog did not auto-magically clear out all the distractions for me and made me a 
 100x execution machine. What it did in fact is put me on a path of 1% improvements, 
 if and when I find them.
