@@ -3,7 +3,7 @@ title: "My Journey through The Command-Line Rust Book"
 description: "Working on terminal tools as a Rust beginner"
 date: "June 20, 2026"
 image: "https://w2tkg6h17v.ufs.sh/f/328EZ2MyU1ulyAzO2fBhluaiFSobRVPp8zCvQXnMdxqK9046"
-draft: false
+draft: true
 ---
 
 # Why I Picked Up Rust ... Again ...
@@ -72,11 +72,9 @@ all. You are probably better off reading
     - [Zero to Production in Rust by Luca Palmieri](https://www.zero2prod.com/index.html?country=India&discount_code=SEA60)
     - [Rust for Rustaceans by Jon Gjengset](https://rust-for-rustaceans.com/)
 
+# A Review Of the Ecosystem
+
 # My Key Learnings
-
-# The Difficult Bits
-
-# Biggest Surprises
 
 # My Road From Here
 
@@ -97,3 +95,6 @@ bits are important as we are primarily a Golang shop and we might have to call R
 code from Golang services without a complete rewrite!
 
 Thanks for reading till the end.   
+---
+Here's all the code while going through this book - [github.com/IAmRiteshKoushik/cli-rs](https://github.com/IAmRiteshKoushik/cli-rs)
+
