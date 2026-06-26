@@ -14,7 +14,8 @@ my amusement.
 
 The list has been ordered from latest to oldest.
 
-- [Trick Mirror: Reflections on Self-Delusion](https://www.goodreads.com/en/book/show/43126457-trick-mirror)
+- [Keep Going](https://www.goodreads.com/en/book/show/40591677-keep-going)
+- [Steal Like An Artist](https://www.goodreads.com/book/show/16160706)
 - [Shoe Dog: A Memoir By The Creator of NIKE](https://www.goodreads.com/en/book/show/27220736-shoe-dog)
 - [Master of Doom: How Two Guys Created An Empire and Transformed Pop Culture](https://www.goodreads.com/book/show/222146.Masters_of_Doom)
 - [The Accidental CTO by Subash Chaudhary](https://www.goodreads.com/book/show/241929607-the-accidental-cto)
@@ -30,3 +31,8 @@ The list has been ordered from latest to oldest.
 
 - [Surrounded by Idiots](https://www.goodreads.com/book/show/39101777-surrounded-by-idiots)
 - [Originals: How Non-Confirmists Move the World](https://www.goodreads.com/en/book/show/25614523-originals)
+- [Trick Mirror: Reflections on Self-Delusion](https://www.goodreads.com/en/book/show/43126457-trick-mirror)
+- [The Artist's Way]()
+- [The Creative Act]()
+- [The War of Art]()
+- [The Things You Can See Only When You Slow Down](https://www.goodreads.com/book/show/30780006-the-things-you-can-see-only-when-you-slow-down)
