@@ -31,9 +31,14 @@ const formatWeeknoteDate = (date: Date) => {
             <time class="weeknote-index-date" datetime={post.data.date.toISOString()}>
               {formatWeeknoteDate(post.data.date)}
             </time>
+            <div>
             <a class="weeknote-index-link" href={`/weeknotes/${post.slug}/`}>
               {post.data.title}
             </a>
+            <p class="weeknote-index-row-subtext">
+              {post.data.description}
+            </p>
+            </div>
           </li>
         ))}
       </ul>
@@ -84,6 +89,10 @@ const formatWeeknoteDate = (date: Date) => {
 
   .weeknote-index-row:hover {
     background: color-mix(in srgb, var(--text) 6%, transparent);
+  }
+
+  .weeknote-index-row-subtext {
+    color: var(--muted);
   }
 
   .weeknote-index-date {
