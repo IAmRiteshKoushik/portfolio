@@ -1,0 +1,115 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import { WEEKNOTES } from "@consts";
+
+const posts = (await getCollection("weeknotes"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const formatWeeknoteDate = (date: Date) => {
+  const base = date.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+  const [day, month, year] = base.split(" ");
+  return `${day} ${month}, ${year}`;
+};
+---
+
+<PageLayout title={WEEKNOTES.TITLE} description={WEEKNOTES.DESCRIPTION}>
+  <Container>
+    <section class="animate blog-index">
+      <h1 class="blog-index-title">Weeknotes</h1>
+      <p class="blog-index-description">{WEEKNOTES.DESCRIPTION}</p>
+
+      <ul class="blog-index-list">
+        {posts.map((post) => (
+          <li class="blog-index-row">
+            <time class="blog-index-date" datetime={post.data.date.toISOString()}>
+              {formatWeeknoteDate(post.data.date)}
+            </time>
+            <a class="blog-index-link" href={`/blog/${post.slug}/`}>
+              {post.data.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </Container>
+</PageLayout>
+
+<style>
+  .blog-index {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .blog-index-title {
+    margin: 0;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.05;
+  }
+
+  .blog-index-description {
+    margin: 0;
+    color: var(--muted);
+    max-width: 68ch;
+    line-height: 1.6;
+  }
+
+  .blog-index-list {
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .blog-index-row {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    align-items: baseline;
+    column-gap: 1.2rem;
+    padding: 0.95rem 0.65rem;
+    transition: background-color 180ms ease;
+  }
+
+  .blog-index-row + .blog-index-row {
+    border-top: 1px solid var(--line);
+  }
+
+  .blog-index-row:hover {
+    background: color-mix(in srgb, var(--text) 6%, transparent);
+  }
+
+  .blog-index-date {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--muted);
+    font-size: 0.82rem;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+
+  .blog-index-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: clamp(0.9rem, 1.02vw, 1.04rem);
+    line-height: 1.35;
+    font-weight: 560;
+  }
+
+  .blog-index-link:hover {
+    color: var(--accent-text);
+  }
+
+  @media (max-width: 640px) {
+    .blog-index-row {
+      grid-template-columns: 1fr;
+      row-gap: 0.4rem;
+    }
+  }
+</style>

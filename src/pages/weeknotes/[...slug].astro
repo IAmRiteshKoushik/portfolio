@@ -1,0 +1,54 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import FormattedDate from "@components/FormattedDate.astro";
+import { readingTime } from "@lib/utils";
+import BackToPrev from "@components/BackToPrev.astro";
+import Comments from "@components/Comments.astro";
+
+export async function getStaticPaths() {
+  const weeknotes = (await getCollection("weeknotes"))
+    .filter(weeknote => !post.data.draft)
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  return weeknotes.map((post) => ({
+    params: { slug: weeknote.slug },
+    props: weeknote,
+  }));
+}
+type Props = CollectionEntry<"weeknotes">;
+
+const note = Astro.props;
+const { Content } = await note.render();
+---
+
+<PageLayout
+  title={weeknote.data.title}
+  description={weeknote.data.description}
+  image={weeknote.data.image}
+>
+  <Container>
+    <div class="animate">
+      <BackToPrev href="/blog">
+        Back to blog
+      </BackToPrev>
+    </div>
+    <div class="space-y-1 my-10">
+      <div class="animate flex items-center gap-1.5">
+        <div class="font-base text-sm">
+          <FormattedDate date={weeknote.data.date} />
+        </div>
+        &bull;
+        <div class="font-base text-sm">
+          {readingTime(weeknote.body)}
+        </div>
+      </div>
+      <div class="animate text-2xl font-semibold text-black dark:text-white">
+        {weeknote.data.title}
+      </div>
+    </div>
+    <article class="animate">
+      <Content />
+    </article>
+  </Container>
+</PageLayout>
