@@ -21,17 +21,17 @@ const formatWeeknoteDate = (date: Date) => {
 
 <PageLayout title={WEEKNOTES.TITLE} description={WEEKNOTES.DESCRIPTION}>
   <Container>
-    <section class="animate blog-index">
-      <h1 class="blog-index-title">Weeknotes</h1>
-      <p class="blog-index-description">{WEEKNOTES.DESCRIPTION}</p>
+    <section class="animate weeknote-index">
+      <h1 class="weeknote-index-title">Weeknotes</h1>
+      <p class="weeknote-index-description">{WEEKNOTES.DESCRIPTION}</p>
 
-      <ul class="blog-index-list">
+      <ul class="weeknote-index-list"s>
         {posts.map((post) => (
-          <li class="blog-index-row">
-            <time class="blog-index-date" datetime={post.data.date.toISOString()}>
+          <li class="weeknote-index-row">
+            <time class="weeknote-index-date" datetime={post.data.date.toISOString()}>
               {formatWeeknoteDate(post.data.date)}
             </time>
-            <a class="blog-index-link" href={`/blog/${post.slug}/`}>
+            <a class="weeknote-index-link" href={`/weeknotes/${post.slug}/`}>
               {post.data.title}
             </a>
           </li>
@@ -42,13 +42,13 @@ const formatWeeknoteDate = (date: Date) => {
 </PageLayout>
 
 <style>
-  .blog-index {
+  .weeknote-index {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
   }
 
-  .blog-index-title {
+  .weeknote-index-title {
     margin: 0;
     font-family: "Instrument Serif", serif;
     font-weight: 400;
@@ -56,20 +56,20 @@ const formatWeeknoteDate = (date: Date) => {
     line-height: 1.05;
   }
 
-  .blog-index-description {
+  .weeknote-index-description {
     margin: 0;
     color: var(--muted);
     max-width: 68ch;
     line-height: 1.6;
   }
 
-  .blog-index-list {
+  .weeknote-index-list {
     margin: 1.25rem 0 0;
     padding: 0;
     list-style: none;
   }
 
-  .blog-index-row {
+  .weeknote-index-row {
     display: grid;
     grid-template-columns: 120px minmax(0, 1fr);
     align-items: baseline;
@@ -78,15 +78,15 @@ const formatWeeknoteDate = (date: Date) => {
     transition: background-color 180ms ease;
   }
 
-  .blog-index-row + .blog-index-row {
+  .weeknote-index-row + .weeknote-index-row {
     border-top: 1px solid var(--line);
   }
 
-  .blog-index-row:hover {
+  .weeknote-index-row:hover {
     background: color-mix(in srgb, var(--text) 6%, transparent);
   }
 
-  .blog-index-date {
+  .weeknote-index-date {
     font-family: "JetBrains Mono", monospace;
     color: var(--muted);
     font-size: 0.82rem;
@@ -94,7 +94,7 @@ const formatWeeknoteDate = (date: Date) => {
     white-space: nowrap;
   }
 
-  .blog-index-link {
+  .weeknote-index-link {
     color: var(--text);
     text-decoration: none;
     font-size: clamp(0.9rem, 1.02vw, 1.04rem);
@@ -102,12 +102,12 @@ const formatWeeknoteDate = (date: Date) => {
     font-weight: 560;
   }
 
-  .blog-index-link:hover {
+  .weeknote-index-link:hover {
     color: var(--accent-text);
   }
 
   @media (max-width: 640px) {
-    .blog-index-row {
+    .weeknote-index-row {
       grid-template-columns: 1fr;
       row-gap: 0.4rem;
     }

@@ -9,17 +9,18 @@ import Comments from "@components/Comments.astro";
 
 export async function getStaticPaths() {
   const weeknotes = (await getCollection("weeknotes"))
-    .filter(weeknote => !post.data.draft)
+    .filter(post => !post.data.draft)
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
   return weeknotes.map((post) => ({
-    params: { slug: weeknote.slug },
-    props: weeknote,
+    params: { slug: post.slug },
+    props: post,
   }));
 }
 type Props = CollectionEntry<"weeknotes">;
 
-const note = Astro.props;
-const { Content } = await note.render();
+const weeknote = Astro.props;
+const { Content } = await weeknote.render();
 ---
 
 <PageLayout
