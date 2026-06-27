@@ -25,7 +25,7 @@ const formatWeeknoteDate = (date: Date) => {
       <h1 class="weeknote-index-title">Weeknotes</h1>
       <p class="weeknote-index-description">{WEEKNOTES.DESCRIPTION}</p>
 
-      <ul class="weeknote-index-list"s>
+      <ul class="weeknote-index-list">
         {posts.map((post) => (
           <li class="weeknote-index-row">
             <time class="weeknote-index-date" datetime={post.data.date.toISOString()}>

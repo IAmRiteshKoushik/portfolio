@@ -5,7 +5,6 @@ import Container from "@components/Container.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import { readingTime } from "@lib/utils";
 import BackToPrev from "@components/BackToPrev.astro";
-import Comments from "@components/Comments.astro";
 
 export async function getStaticPaths() {
   const weeknotes = (await getCollection("weeknotes"))
@@ -26,7 +25,6 @@ const { Content } = await weeknote.render();
 <PageLayout
   title={weeknote.data.title}
   description={weeknote.data.description}
-  image={weeknote.data.image}
 >
   <Container>
     <div class="animate">
