@@ -33,14 +33,14 @@ const projects = defineCollection({
   }),
 });
 
-// const til = defineCollection({
-// 	type: "til",
-// 	schema: z.object({
-// 		title: z.string(),
-// 		description: z.string(),
-// 		date: z.coerce.date(),
-// 		draft: z.boolean().optional(),
-// 	}),
-// });
+const weeknotes = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    date: z.coerce.date(),
+    draft: z.boolean().optional(),
+  }),
+});
 
-export const collections = { blog, work, projects };
+export const collections = { blog, work, projects, weeknotes };
