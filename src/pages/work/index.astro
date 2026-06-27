@@ -5,11 +5,14 @@ import Container from "@components/Container.astro";
 import { dateRange } from "@lib/utils";
 import { WORK } from "@consts";
 
-const collection = (await getCollection("work"))
+// TODO: Add work, projects and contact in the same space.
+const workCollection = (await getCollection("work"))
   .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateEnd).valueOf());
 
+// const projectCollection = (await getCollection("projects"))
+
 const work = await Promise.all(
-  collection.map(async (item) => {
+  workCollection.map(async (item) => {
     const { Content } = await item.render();
     return { ...item, Content };
   })
@@ -20,7 +23,7 @@ const work = await Promise.all(
   <Container>
     <div class="space-y-10">
       <h1 class="animate work-index-title">
-       My Work Timeline
+        Work
       </h1>
       <ul class="flex flex-col space-y-4">
         { 
@@ -42,6 +45,9 @@ const work = await Promise.all(
           ))
         }
       </ul>
+      <h1 class="animate work-index-title">
+        Projects (coming soon)
+      </h1>
     </div>
   </Container>
 </PageLayout>
