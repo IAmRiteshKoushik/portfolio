@@ -6,7 +6,7 @@ import Link from "@components/Link.astro";
 import { dateRange } from "@lib/utils";
 import { SITE, HOME, SOCIALS } from "@consts";
 
-const blog = (await getCollection("blog"))
+const post = (await getCollection("blog"))
   .filter(post => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0,SITE.NUM_POSTS_ON_HOMEPAGE);
@@ -33,30 +33,23 @@ const work = await Promise.all(
       <section>
         <article class="space-y-4">
           <p class="animate">
-          I am a backend developer. I have experience in working with AI, data 
-          engineering and distributed systems. I primarily work with Golang, 
-          SQL databases, CLI tools and occassionally Python and Rust.
+          Backend developer at HDFC's AI Banking team. Everyday Go, amateur Rustacean.
           </p>
-          <p class="animate">
-          Outside of work, I explore open-source codebases in the cloud-native 
-          space, read blogs, books and try my hand at sketching. 
-          </p>
-          <p>I write blogs on topics that I might need to come back to :)</p>
         </article>
       </section>
 
-      <!-- Blog -->
+      <!-- Posts (renamed from Blogs) -->
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="home-section-heading text-black dark:text-white">
-            My Latest blogs
+            Recent Posts
           </h5>
           <Link href="/blog">
             See all
           </Link>
         </div>
         <ul class="list-disc pl-5 space-y-2">
-          {blog.map(post => (
+          {post.map(post => (
             <li>
               <Link href={`/blog/${post.slug}/`}>
                 {post.data.title}
