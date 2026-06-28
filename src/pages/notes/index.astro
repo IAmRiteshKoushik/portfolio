@@ -1,0 +1,124 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import { NOTES } from "@consts";
+
+const posts = (await getCollection("notes"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const formatNoteDate = (date: Date) => {
+  const base = date.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+  const [day, month, year] = base.split(" ");
+  return `${day} ${month}, ${year}`;
+};
+---
+
+<PageLayout title={NOTES.TITLE} description={NOTES.DESCRIPTION}>
+  <Container>
+    <section class="animate note-index">
+      <h1 class="note-index-title">Notes</h1>
+      <p class="note-index-description">{NOTES.DESCRIPTION}</p>
+
+      <ul class="note-index-list">
+        {posts.map((post) => (
+          <li class="note-index-row">
+            <time class="note-index-date" datetime={post.data.date.toISOString()}>
+              {formatNoteDate(post.data.date)}
+            </time>
+            <div>
+            <a class="note-index-link" href={`/notes/${post.slug}/`}>
+              {post.data.title}
+            </a>
+            <p class="note-index-row-subtext">
+              {post.data.description}
+            </p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </Container>
+</PageLayout>
+
+<style>
+  .note-index {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .note-index-title {
+    margin: 0;
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.05;
+  }
+
+  .note-index-description {
+    margin: 0;
+    color: var(--muted);
+    max-width: 68ch;
+    line-height: 1.6;
+  }
+
+  .note-index-list {
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .note-index-row {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    align-items: baseline;
+    column-gap: 1.2rem;
+    padding: 0.95rem 0.65rem;
+    transition: background-color 180ms ease;
+  }
+
+  .note-index-row + .note-index-row {
+    border-top: 1px solid var(--line);
+  }
+
+  .note-index-row:hover {
+    background: color-mix(in srgb, var(--text) 6%, transparent);
+  }
+
+  .note-index-row-subtext {
+    color: var(--muted);
+  }
+
+  .note-index-date {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--muted);
+    font-size: 0.82rem;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+
+  .note-index-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: clamp(0.9rem, 1.02vw, 1.04rem);
+    line-height: 1.35;
+    font-weight: 560;
+  }
+
+  .note-index-link:hover {
+    color: var(--accent-text);
+  }
+
+  @media (max-width: 640px) {
+    .note-index-row {
+      grid-template-columns: 1fr;
+      row-gap: 0.4rem;
+    }
+  }
+</style>
