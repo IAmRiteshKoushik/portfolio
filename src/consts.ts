@@ -71,6 +71,11 @@ export const WEEKNOTES: Metadata = {
   DESCRIPTION: "Weekly journalling on the internet",
 }
 
+export const NOTES: Metadata = {
+  TITLE: "Notes",
+  DESCRIPTION: "Snippets from life that I save for myself",
+}
+
 export const SOCIALS: Socials = [
   {
     NAME: "twitter-x",
