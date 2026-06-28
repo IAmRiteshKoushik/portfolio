@@ -162,7 +162,7 @@ and changes how you feel about your progress.
 
 - Our culture celebrates early successes but not the perennials. Fast-bloomers 
 are often poor teachers than late-bloomers. The `35 under 35` Forbes list is 
-not as valuable as an `8 over 80` list (if it existed). A human's perseverance 
+perhaps not as valuable as an `8 over 80` list (if it existed). A human's perseverance 
 over decades, his ability to stay relevant, those are things worth studying 
 about.
 
