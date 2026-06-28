@@ -14,6 +14,7 @@ my amusement.
 
 The list has been ordered from latest to oldest.
 
+- [Don't Call It Art](https://www.goodreads.com/book/show/241434350-don-t-call-it-art)
 - [Keep Going](https://www.goodreads.com/en/book/show/40591677-keep-going)
 - [Steal Like An Artist](https://www.goodreads.com/book/show/16160706)
 - [Shoe Dog: A Memoir By The Creator of NIKE](https://www.goodreads.com/en/book/show/27220736-shoe-dog)
