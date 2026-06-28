@@ -5,11 +5,9 @@ date: "June 28, 2025"
 draft: false
 ---
 
-The 3rd book by [Austin Kleon](https://austinkleon.com/) navigates the ideas of 
-not calling something "art" just the ways kids don't. Neither do they call 
-themselves artists, they are just making something. In more ways than one, this 
-allows them to iterative ruthlessly without attaching extreme values or 
-perfectionism to it. 
+The 3rd book by [Austin Kleon](https://austinkleon.com/) navigates the ideas of  
+staying creative in turbulent times. It revolves around understanding what 
+creativity truly is and what are the contraceptive behaviors that surround it. 
 
 Here are some interesting ideas from the book. Would 100% recommend to read.
 
