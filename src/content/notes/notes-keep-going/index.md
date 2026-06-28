@@ -1,5 +1,5 @@
 ---
-title: "Notes from \"Keep Going\" by Austin Kleon"
+title: "Note #1: Ideas from \"Keep Going\" by Austin Kleon"
 description: ""
 date: "June 28, 2025"
 draft: false
