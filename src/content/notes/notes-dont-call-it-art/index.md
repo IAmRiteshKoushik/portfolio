@@ -1,7 +1,7 @@
 ---
 title: "Note #2: Ideas from \"Don't Call It Art\" by Austin Kleon"
 description: ""
-date: "June 29, 2025"
+date: "June 29, 2026"
 draft: false
 ---
 
