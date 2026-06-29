@@ -133,3 +133,141 @@ give yourself materials you are okay seeing wasted.
 - Make a big pile of imperfect things. Eventually, something in the pile will 
 be worth saving.
 
+- Artists are like kids: the line between the imaginary and real world is very 
+thin. The artist crosses back and forth between these worlds. However, the 
+transitions can be bumpy. Ideally, you establish rituals to ease these 
+transitions.
+
+- Put on a mask so that you can tell the truth. Many singers have alter-egos. 
+This is to continue exploring whatever interests them without sabotaging their 
+brands that require consistency of genre. You can do the same. Have different 
+sections to your life that are exposed to different sets of people. Keep what 
+is relevant in the current timeline, throw away everything else. Immerse yourself 
+to be in the moment.
+
+- Artists are simply people with antennas. One who knows to hook up to the currents 
+which are in the atmosphere. Be ready to receive messages from the universe, read 
+its signs, and to take dictation from the unsayable. Good ideas aren't inside 
+you unable to get out, they are mostly outside you, unable to get in.
+
+- Getting into a creative spirit is a whole-body exercise. An artist is like 
+an octopus with multiple brains in their appendages -- their "main brain" is 
+telling them one thing, but their other brains are talking back at them. Often 
+toddlers touch, feel, chew and eat something to get a feel of it. Creativity is 
+a full-body exercise. There is great intelligence in your body if you can learn 
+to use it. Think outside your head.
+
+- Due to so many creative things happening within our body, it is difficult to 
+do much if your body is not at 100% . Most ailments could be cured with a 
+`sandwich`, a `nap` or a `hot bath`.
+
+- Don't fight your feelings. Feel them. Examine them. Use them. The worst thing 
+you can do is to ignore them.
+
+> Problems of output are problems of input.
+
+- Humans need intellectual nourishment at every stage of their development. While 
+we feed our kids seriously, we forget to feed ourselves. When you have problem 
+with your output, there is some problem with your input. Become a sponge and 
+start soaking up what the world has to offer. Be open and alert and on the lookout 
+for what might get you going again.
+
+- By the time to we grow up, we have been told what we are supposed to like for 
+so long that it's easy to lost track of what it is we really like. For example, 
+often times when you try to follow others recommendations, you tend to wander 
+off the path of your own tastes. 
+
+- To discover, you cannot just feed, you need to search. Your search needs to 
+be self-directed. You can't just have things pushed at you; you have to pull 
+things towards you. If you are going to be online, spend less time in feeds and 
+more time in the search box.
+
+- If you don't know what you like anymore, go back to the stuff that you liked 
+when you were younger and see if you still like it. Reread, rewatch, and relisten 
+to your old favourites. Sometimes getting in touch with what you use to like can 
+tell you what you really like now.
+
+- Be interested in life. Don't think it was better when you were young. Kids 
+these days are as much interested in life as you were and are having just as 
+much fun. Remain a curious elder and stay interested in what the young people are 
+up to. Don't judge, learn. You don't have to try and act hip, act young, or 
+participate in youth culture, just be open to understanding people younger and 
+try seeing the world from their perspective.
+
+> Embrace bewilderment
+
+If you can understand your children, you have screwed up. If the younger folks 
+shake you up, scare you or downright mystify you, revel in it. It means that 
+it is a healthy future. 
+
+- In the modern world, to waste time is considered as the greatest of sins, and 
+idleness is looked upon with suspicion. To be though of as productive, one needs 
+to look busy. But you will not always look busy when you are creative. In fact, if
+you check in on creative people, they will look like they are doing absolutely 
+nothing or doing the kinds of things that kids get yelled at for in the classroom.
+
+    - daydreaming
+    - fidgeting
+    - doodling
+    - staring out of the window
+
+- Leave yourself twice as much time as you think you need for a project, knowing 
+that half of that may not look like 'making' anything at all. Give yourself 
+time to waste. Forget your ideas of "efficiency." Work as slowly or as quickly 
+as you want to. Resist the urge to get back to work just to stop idling.
+
+> Boredom is a pitstop on the way to figuring out what fascinates you.
+
+- Boredom is very good for creativity, for it forces you to think up your own 
+entertainment and discover something to do. The trouble is now that we live in 
+an age in which we never give ourselves the chance to be bored. All the 
+entertainment we could ever dream of is at our fingertips, waiting on the phone 
+in our pocket.
+
+- Lastly, there is no winning in creative life. You are not in a race; you are 
+on a journey. You can go as fast or as slow as you want to. There is no 
+stopping when you are running a race, but when you are on a journey, it's 
+good to stop, take a break, look around, and get your bearings. Stopping for a 
+while is not the same as quitting. You can stop and reserve the right to start 
+again. 
+
+- But you also have the right of quitting. We are afraid of quitting because we 
+usually don't know what can be gained by quitting. When you quit things, you 
+clear space for new things to take their place. Sometimes when we quit things 
+we realize just how much they mean to us. We return to the things we quit with 
+a fresh enthusiasm and perspective.
+
+- Quitting little things train you to quit the big things. To respond to what's 
+really not working for you, to be flexible, and to correct course.
+
+- Life of an artist is like any other life: It will have its ups and downs. 
+There will be times when you don't even like yourself, when you will wish to  
+get as far away from yourself as possible. All you have to do is go through the 
+motions of care: give yourself grace, clean up your messes, do the thankless 
+maintenance work that must be done. 
+
+> There will be days when you would want to throw yourself out of the window. 
+That's okay. The important thing is you don't.
+
+- We have conventionally thought that the past is behind us and the future is 
+ahead of us, but it might be the opposite. The past is in front of us because we 
+can see it. The future is behind is because we cannot see it. With that in mind, 
+don't look behind because it's dark. Learn from the past instead and proceed. 
+Keep your eyes glued to the past, but don't glue yourself to it!
+
+- Visualization as a method to move forward and achieve goals in life has worked 
+for non-creative professions because the paths are definite and there are 
+sufficient examples of people who have walked upon them. For creative people 
+however, it is the opposite and visualization seldom leads to anything worthwhile.
+
+- Having a vision is good but clinging onto it can create a form of inflexibility 
+within you where you fail to see what is right in front of you. History is full 
+of people with a vision who left a wide path of destruction in their wake.
+
+- The materials at hand are the only materials you ever have. To not start out with 
+a vision in your head means you can really see what's in front of you and then 
+figure out what to do with it. If you start with no preconceived notion of what 
+things are going to look like, you can remain flexible and open. You can discover 
+things that are beyond what you or anyone else could've pictured.
+
+> Don't call it art. Just make stuff.
