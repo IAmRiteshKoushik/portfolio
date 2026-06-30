@@ -14,6 +14,7 @@ my amusement.
 
 The list has been ordered from latest to oldest.
 
+- [Originals: How Non-Conformists Move the World](https://www.goodreads.com/en/book/show/25614523-originals)
 - [Don't Call It Art](https://www.goodreads.com/book/show/241434350-don-t-call-it-art)
 - [Keep Going](https://www.goodreads.com/en/book/show/40591677-keep-going)
 - [Steal Like An Artist](https://www.goodreads.com/book/show/16160706)
@@ -31,7 +32,6 @@ The list has been ordered from latest to oldest.
 ## In Queue
 
 - [Surrounded by Idiots](https://www.goodreads.com/book/show/39101777-surrounded-by-idiots)
-- [Originals: How Non-Confirmists Move the World](https://www.goodreads.com/en/book/show/25614523-originals)
 - [Trick Mirror: Reflections on Self-Delusion](https://www.goodreads.com/en/book/show/43126457-trick-mirror)
 - [The Artist's Way]()
 - [The Creative Act]()
