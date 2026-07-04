@@ -1,6 +1,6 @@
 ---
 title: "Weeknotes: Week #27 - 2026"
-description: "Purchases, Art and a lot more Rust"
+description: "Purchases, Art and a lot more Books"
 date: "July 4, 2026"
 draft: false
 ---
@@ -25,4 +25,34 @@ The entire thing is the length of an iPhone.
 I have re-read one of Austin Kleon's works and now I am wrapping up the rest of 
 his books in creativity. You can check out my notes section if you are curious.
 
-More to come ...
+- Later in the week, I also picked up Originals by Adam Grant. Needless to say, 
+it's an amazing book rooted in organizational psychology.
+
+- Not much coding done this week, although I finally got my laptop and a bunch 
+of tickets raised for installing software. It's a locked down MacBook so the 
+experience is a bit limited but hey, something is better than nothing. I have a 
+new codebase to go through and figure stuff out. I can finally grow in the way 
+I want to.
+
+- On a personal front, health has not really been great. One bad shawarma is 
+all it takes. Going to try and be more disciplined this weekend onwards so that 
+I avoid external food altogether for 1 week. Interestingly, I have taken 0 
+WFHs this week which is a first for me since coming to Bangalore. Honestly, it 
+feels good to go to office. I don't have much to do at home either ways. The 
+only thing getting in the way is my sleep schedule.
+
+- I think I have go my work cut out for this weekend. Need to work on a few 
+chapters from DDIA. I am looking to run till chapter 5 or 6. At the same time, I 
+need to go through the entire codebase that Suraj has shared and figure out the 
+necessary patterns that he wanted me to. And while I do all of this, I also need 
+to lay down the groundwork for Ashwin's backend service and rewrite the 
+MCP testing layer completely in Python (for the sake of developing Python skills). 
+
+- In the future that is dubbed "next week", I will mostly have to go through 
+the latest MCP specification of this month's July 27th release and figure out 
+how to build out a Python MCP Client SDK. One constraint I am putting upon 
+myself is that I need to keep it as close to the real library as possible while 
+adding in sufficient customization for my team. This will be the real-test of 
+my software development skills accumulated over the last few months. 
+
+> The future belongs to those who believe in the beauty of their dreams
