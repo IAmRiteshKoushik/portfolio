@@ -31,7 +31,7 @@ The entities that we are dealing with include
 
 Keeping the above table in mind can help in interviews.
 
-A complete resource for this is [github repo](https://github.com/sirupsen/napkin-math).
+A complete resource for this is here - [github repo](https://github.com/sirupsen/napkin-math).
 
 There is no need to memorize every single number from the README of the repo. 
 This primarily comes in handy when you are looking for sites of optimization 
