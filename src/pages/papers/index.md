@@ -65,3 +65,4 @@ Would love to explore newer domains and hear your suggestions.
 - [The Transport Layer Security Protocol Version 1.3](https://www.google.com/search?q=https://www.ietf.org/rfc/rfc8446.pdf) `Queued`
 - [The OAuth 2.0 Authorization Framework](https://www.google.com/search?q=https://www.ietf.org/rfc/rfc6749.pdf) `Queued`
 - [Role-Based Access Control Models](https://www.google.com/search?q=https://profsandhu.com/journals/computer/i96rbac.pdf) `Queued`
+- [A Critique of the CAP Theorem by Martin Kleppmann](https://www.cl.cam.ac.uk/research/dtg/archived/files/publications/public/mk428/cap-critique.pdf) `Queued`
