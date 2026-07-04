@@ -21,7 +21,7 @@ The entities that we are dealing with include
 | l2 cpu cache    | 3ns  |
 | l3 cpu cache    | 10ns  |
 | RAM | 100ns  |
-| nvme ssd | 50 micro-s  |
+| NVME SSD | 50 micro-s  |
 | HDD | 1-10ms  |
 | storage (same region) | 1ms |
 | east-west US | 70ms  |
