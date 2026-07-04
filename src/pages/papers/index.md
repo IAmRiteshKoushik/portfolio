@@ -46,8 +46,8 @@ Would love to explore newer domains and hear your suggestions.
 - [Dynamo: Amazon's Highly Available Key-value Store](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf) `Queued`
 - [Spanner: Google's Globally Distributed Database](https://static.googleusercontent.com/media/research.google.com/en//archive/spanner-osdi2012.pdf) `Queued`
 - [WiscKey: Separating Keys from Values in SSD-Conscious Storage](https://www.usenix.org/system/files/conference/fast16/fast16-papers-lu.pdf) `Queued`
-- [Sagas](https://www.google.com/search?q=https://www.cs.princeton.edu/courses/archive/fall16/cos518/papers/sagas.pdf) `Queued`
-- [ZooKeeper: Wait-free Coordination for Internet-Scale Systems](https://www.google.com/search?q=https://www.usenix.org/system/files/conference/usenixatc10/atc10_hunt.pdf) `Queued`
+- [Sagas](https://www.google.com/search?q=https://www.cs.princeton.edu/courses/archive/fall16/cos518/papers/sagas.pdf) `Queued` 
+- [ZooKeeper: Wait-free Coordination for Internet-Scale Systems](https://www.google.com/search?q=https://www.usenix.org/system/files/conference/usenixatc10/atc10_hunt.pdf) `Queued` 
 - [The Chubby Lock Service for Loosely-Coupled Distributed Systems](https://static.googleusercontent.com/media/research.google.com/en//archive/chubby-osdi06.pdf) `Queued`
 - [Dapper, a Large-Scale Distributed Systems Tracing Infrastructure](https://www.google.com/search?q=https://static.googleusercontent.com/media/research.google.com/en//archive/dapper-2010.pdf) `Queued`
 - [Large-Scale Cluster Management at Google with Borg](https://www.google.com/search?q=https://static.googleusercontent.com/media/research.google.com/en//archive/borg-eurosys15.pdf) `Queued`
