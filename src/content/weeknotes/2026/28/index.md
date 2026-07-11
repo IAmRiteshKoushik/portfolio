@@ -1,5 +1,5 @@
 ---
-title: "Weeknotes: Week #27 - 2026"
+title: "Weeknotes: Week #28 - 2026"
 description: "The week of architectures ... at work"
 date: "July 11, 2026"
 draft: false
