@@ -9,7 +9,7 @@ draft: false
 
 Adam Grant is an organizational psychologist. I discovered him 6 years ago 
 from his [TED Talk](https://youtu.be/fxbCHn6gE3U?si=RVGoLD4c7GWg22WA) on original 
-thinkers. Having followed some of your work on YouTube, I could finally make 
+thinkers. Having followed some of his work on YouTube, I could finally make 
 time and get through my reading list to finally land up on his book. This note 
 captures the essence of his book for my future references:
 
@@ -78,3 +78,21 @@ of ideas. Creative geniuses are not qualitatively better than their peers.
 
 > The odds of producing an influential or successful idea is a positive function 
 of the total number of ideas generated.
+
+- Managers are too risk averse. They focus on the costs of investing in bad 
+ideas rather than the benefits of piloting good ones. The more experience and 
+expertise people gain, the more entrenched they become in a particular way of 
+viewing the world. 
+
+- Focused group of evaluators often make the same mistakes as the manager. They 
+do not engage with something to experience it, they do so to evaluate it hence 
+there is judgement from the beginning.
+
+- If we want to increase of our odds of betting on the best original ideas, we 
+have to generate our own ideas immediately before we screen others' suggestions.
+Interest in arts among entrepreneurs, inventors and eminent scientists obviously 
+reflect their curiosity and aptitude. People who are open to new ways of looking 
+at science and business also tend to be fascinated by the expression of ideas and 
+emotions through images, sounds and words.
+
+- 
