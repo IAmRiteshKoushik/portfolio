@@ -4,8 +4,9 @@ export const SITE: Site = {
   NAME: "Ritesh Koushik",
   EMAIL: "riteshkoushik39@gmail.com",
   NUM_POSTS_ON_HOMEPAGE: 5,
-  NUM_WORKS_ON_HOMEPAGE: 3,
-  NUM_WEEKNOTES_ON_HOMEPAGE: 3,
+  NUM_WORKS_ON_HOMEPAGE: 2,
+  NUM_WEEKNOTES_ON_HOMEPAGE: 2,
+  NUM_NOTES_ON_HOMEPAGE: 3,
 };
 
 const giscusRepo = import.meta.env.PUBLIC_GISCUS_REPO?.trim() ?? "";

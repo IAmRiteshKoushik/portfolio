@@ -14,8 +14,12 @@ const post = (await getCollection("blog"))
 const weeknotes = (await getCollection("weeknotes"))
   .filter(post => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0,SITE.NUM_POSTS_ON_HOMEPAGE);
+  .slice(0,SITE.NUM_WEEKNOTES_ON_HOMEPAGE);
 
+const notes = (await getCollection("notes"))
+  .filter(post => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0,SITE.NUM_NOTES_ON_HOMEPAGE);
 
 const allwork = (await getCollection("work"))
   .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf())
@@ -65,13 +69,34 @@ const work = await Promise.all(
         </ul>
       </section>
 
+      <!-- Notes -->
+      <section class="animate space-y-6">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h5 class="home-section-heading text-black dark:text-white">
+            Notes.
+          </h5>
+          <Link href="/notes">
+            See all
+          </Link>
+        </div>
+        <ul class="list-disc pl-5 space-y-2">
+          {notes.map(post => (
+            <li>
+              <Link href={`/notes/${post.slug}/`}>
+                {post.data.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <!-- Weeknotes -->
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="home-section-heading text-black dark:text-white">
             Weeknotes.
           </h5>
-          <Link href="/blog">
+          <Link href="/weeknotes">
             See all
           </Link>
         </div>

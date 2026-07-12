@@ -4,6 +4,7 @@ export type Site = {
   NUM_POSTS_ON_HOMEPAGE: number;
   NUM_WORKS_ON_HOMEPAGE: number;
   NUM_WEEKNOTES_ON_HOMEPAGE: number;
+  NUM_NOTES_ON_HOMEPAGE: number;
 };
 
 export type Comments = {
