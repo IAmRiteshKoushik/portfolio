@@ -78,11 +78,61 @@ and start making the call that's the hardest to attack.
 You soften the stronger label because it may seem overconfident. The entire 
 thing gets smaller and more defensive, one decision at a time. 
 
-- Researchers call it self-handicapping.
+- Researchers call it self-handicapping. People with a fixed view of their own 
+abilities were more afraid of failing, and that fear pushed them towards one 
+specific goal: avoiding showing inability. Not make great work. Just avoid looking 
+bad.
+
+- Fear should be questioned just like anything else that shapes the work. Most 
+of the time, nobody questions it at all.
+
+> The user never sees the personal struggle. They see the decision that came out 
+of it.
 
 ## 04. Design for Your Ego
 
+> Cognitive dissonance makes criticism feel personal. Once your identity gets 
+tied up in the work, feedback stops being useful input and starts feeling like 
+something you should defend against.
+
+- Feedback regarding your work is often not a proof of whether you are good at 
+doing your job. It is often scoped to your current task. Taking it to heart 
+and allowing it to penetrate your identity makes it unproductive.
+
+- Cutting out work from your solution feels too close to admitting that you were 
+not as smart as you projected to be. The threat feels personal before the defense 
+starts sounding intellectual.
+
+- Instead of phrasing things as "this might go wrong", rephrase it as "it already 
+failed" and then ask why. If you are not trying to protect a LIVE idea anymore. 
+You are looking back at something that already fell over, which makes it easier 
+to be honest about where it was weak.
+
 ## 05. Your Mind Lies to You
+
+> The more fluently perceivers can process an object, the more positive their 
+aesthetic response is going to be.
+
+This is not truth or clarity. It is just ease.
+
+- In design or code, as you keep opening the same file, the same screens, the 
+same flows; you stop needing to work to understand it because your brain knows 
+the route. The work appears to be better because you got faster at reading your 
+own intentions.
+
+Familiarity can masquerade as simplicity.
+
+- The way to address this is to step away from the file and then come back to it. 
+The places where you start filling in meaning from memory instead of from the 
+screen, that is where the trouble is beginning.
+
+- Try to loudly narrate the screen as if you are seeing it for the first time. 
+The first place where the narration gets muddy is usually not a speaking problem. 
+It points to a design problem.
+
+- This is why outside eyes matter. Not because your judgement is useless, but 
+it is no longer fresh. Other people hit spots your own brain has been 
+smoothening over.
 
 ## 06. Taste Isn't Talent
 
