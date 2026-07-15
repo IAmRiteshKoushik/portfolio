@@ -1,5 +1,5 @@
 ---
-title: "TIL: Napkin Math for Engineers"
+title: "Note #4: Napkin Math for Engineers"
 description: ""
 date: "July 4, 2026"
 draft: false

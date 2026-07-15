@@ -5,8 +5,6 @@ date: "June 30, 2026"
 draft: false
 ---
 
-> Work In Progress: Read at ur own risk
-
 Adam Grant is an organizational psychologist. I discovered him 6 years ago 
 from his [TED Talk](https://youtu.be/fxbCHn6gE3U?si=RVGoLD4c7GWg22WA) on original 
 thinkers. Having followed some of his work on YouTube, I could finally make 
@@ -95,4 +93,26 @@ reflect their curiosity and aptitude. People who are open to new ways of looking
 at science and business also tend to be fascinated by the expression of ideas and 
 emotions through images, sounds and words.
 
-- 
+- It is when people have moderate expertise in a particular domain that they are 
+the most open to radically creative ideas. 
+
+- Experience helps physicists, accountants, insurance analysts and chess masters 
+as they are all in fields where cause-and-effect relationships are fairly 
+consistent. But admission officers, court judges, intelligence analysts, 
+psychiatrists and stockbrokers do not benefit much from experience. In a rapidly 
+changing world, the lessons of experience can easily point us in the wrong 
+direction. And because the pace of change is accelerating, our environments 
+are becoming ever more unpredictable. This makes intuition less reliable as a 
+source of insight about new ideas and places a growing premium on analysis. 
+
+> There is a hubris that comes with success. The more successful people have 
+been in the past, the worse they perform when they enter a new environment.
+
+- The enthusiasm we inject into our words, tone of voice, and body language isn't 
+a clue on the internal passion we experience, but merely a reflection of our 
+presentation skills and our personalities. Being extroverted or introverted has 
+essentially no bearing on whether we'll succeed as entrepreneurs.
+
+> It's never the idea, it is the execution.
+
+
