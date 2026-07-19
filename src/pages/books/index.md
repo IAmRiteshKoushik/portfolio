@@ -32,10 +32,10 @@ The list has been ordered from latest to oldest.
 
 ## In Queue
 
+- [The Martian](https://www.goodreads.com/book/show/18007564-the-martian)
 - [Priosners of Geography](https://www.goodreads.com/book/show/27286061-prisoners-of-geography)
 - [Surrounded by Idiots](https://www.goodreads.com/book/show/39101777-surrounded-by-idiots)
 - [Trick Mirror: Reflections on Self-Delusion](https://www.goodreads.com/en/book/show/43126457-trick-mirror)
-- [The Artist's Way]()
-- [The Creative Act]()
-- [The War of Art]()
+- [The Creative Act](https://www.goodreads.com/book/show/60965426-the-creative-act)
+- [The War of Art](https://www.goodreads.com/book/show/18624273-the-war-of-art)
 - [The Things You Can See Only When You Slow Down](https://www.goodreads.com/book/show/30780006-the-things-you-can-see-only-when-you-slow-down)
