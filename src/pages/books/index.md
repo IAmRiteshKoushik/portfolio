@@ -33,7 +33,7 @@ The list has been ordered from latest to oldest.
 ## In Queue
 
 - [The Martian](https://www.goodreads.com/book/show/18007564-the-martian)
-- [Priosners of Geography](https://www.goodreads.com/book/show/27286061-prisoners-of-geography)
+- [Prisoners of Geography](https://www.goodreads.com/book/show/27286061-prisoners-of-geography)
 - [Surrounded by Idiots](https://www.goodreads.com/book/show/39101777-surrounded-by-idiots)
 - [Trick Mirror: Reflections on Self-Delusion](https://www.goodreads.com/en/book/show/43126457-trick-mirror)
 - [The Creative Act](https://www.goodreads.com/book/show/60965426-the-creative-act)
