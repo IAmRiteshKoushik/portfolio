@@ -14,6 +14,7 @@ my amusement.
 
 The list has been ordered from latest to oldest.
 
+- [The Martian](https://www.goodreads.com/book/show/18007564-the-martian)
 - [Project Hail Mary](https://www.goodreads.com/en/book/show/54493401-project-hail-mary)
 - [Originals: How Non-Conformists Move the World](https://www.goodreads.com/en/book/show/25614523-originals)
 - [Don't Call It Art](https://www.goodreads.com/book/show/241434350-don-t-call-it-art)
@@ -32,7 +33,6 @@ The list has been ordered from latest to oldest.
 
 ## In Queue
 
-- [The Martian](https://www.goodreads.com/book/show/18007564-the-martian)
 - [Prisoners of Geography](https://www.goodreads.com/book/show/27286061-prisoners-of-geography)
 - [Surrounded by Idiots](https://www.goodreads.com/book/show/39101777-surrounded-by-idiots)
 - [Trick Mirror: Reflections on Self-Delusion](https://www.goodreads.com/en/book/show/43126457-trick-mirror)
