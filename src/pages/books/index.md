@@ -14,6 +14,7 @@ my amusement.
 
 The list has been ordered from latest to oldest.
 
+- [Range: Why Generalists Triump in a Specialized World](https://www.goodreads.com/en/book/show/41795733-range)
 - [The Martian](https://www.goodreads.com/book/show/18007564-the-martian)
 - [Project Hail Mary](https://www.goodreads.com/en/book/show/54493401-project-hail-mary)
 - [Originals: How Non-Conformists Move the World](https://www.goodreads.com/en/book/show/25614523-originals)
