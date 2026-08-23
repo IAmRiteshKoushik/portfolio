@@ -14,6 +14,7 @@ my amusement.
 
 The list has been ordered from latest to oldest.
 
+- [Fruit Fly](https://www.goodreads.com/en/book/show/243596291-fruit-fly)
 - [Range: Why Generalists Triump in a Specialized World](https://www.goodreads.com/en/book/show/41795733-range)
 - [The Martian](https://www.goodreads.com/book/show/18007564-the-martian)
 - [Project Hail Mary](https://www.goodreads.com/en/book/show/54493401-project-hail-mary)
