@@ -5,8 +5,6 @@ date: "Aug 16, 2026"
 draft: false
 ---
 
-> WIP
-
 There is a certain calm to coming back at home. The week has been 
 fairly interesting. I have been able to catch up with a few friends from school 
 as well as reconnecting with Kiran. 
