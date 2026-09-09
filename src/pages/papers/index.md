@@ -20,6 +20,11 @@ Would love to explore newer domains and hear your suggestions.
 
 ## In Queue
 
+### Storage engine foundations
+
+- [Organization and Maintenance of Large Ordered Indexes](https://link.springer.com/article/10.1007/BF00288683) by Rudolf Bayer and Edward M. McCreight (1972) `Queued`
+- [The Log-Structured Merge-Tree (LSM-Tree)](https://www.cs.umb.edu/~poneil/lsmtree.pdf) by Patrick O'Neil, Edward Cheng, Dieter Gawlick and Elizabeth O'Neil (1996) `Queued`
+
 - [Ceph: A Scalable, High-Performance Distributed File System](https://www.usenix.org/legacy/events/osdi06/tech/full_papers/weil/weil.pdf) `Queued`
 - [Epidemic Algorithms for Replicated Database Maintenance](https://github.com/papers-we-love/papers-we-love/blob/main/distributed_systems/epidemic-algorithms-for-replicated-database-maintenance.pdf) `Queued`
 - [Time, Clocks, and the Ordering of Events in a Distributed System](https://www.google.com/search?q=https://www.microsoft.com/en-us/research/uploads/prod/2016/12/Time-Clocks-and-the-Ordering-of-Events-in-a-Distributed-System.pdf) `Queued`
@@ -36,8 +41,6 @@ Would love to explore newer domains and hear your suggestions.
 - [Impossibility of Distributed Consensus with One Faulty Process](https://www.google.com/search?q=https://www.cs.princeton.edu/courses/archive/fall16/cos518/papers/flp.pdf) `Queued`
 - [Elections in a Distributed Computing System](https://www.google.com/search?q=https://www.cs.princeton.edu/courses/archive/fall11/cos518/papers/bully.pdf) `Queued`
 - [Consistent Hashing and Random Trees](https://www.cs.princeton.edu/courses/archive/fall09/cos518/papers/chash.pdf) `Queued`
-- [The Log-Structured Merge-Tree](https://www.cs.umb.edu/~poneil/lsmtree.pdf) `Queued`
-- [Organization and Maintenance of Large Ordered Indexes](https://www.google.com/search?q=https://archive.computerhistory.org/resources/text/Knuth_Don_Web_Archive/Bayer_McCreight_Organization_and_Maintenance_of_Large_Ordered_Indexes_1970.pdf) `Queued`
 - [TAO: Facebook's Distributed Data Store for the Social Graph](https://www.usenix.org/system/files/conference/atc13/atc13-bronson.pdf) `Queued`
 - [Kafka: A Distributed Messaging System for Log Processing](https://www.google.com/search?q=https://www.microsoft.com/en-us/research/wp-content/uploads/2011/06/kafka_netdb11.pdf) `Queued`
 - [The Power of Two Choices in Randomized Load Balancing](https://www.eecs.harvard.edu/~michaelm/postscripts/tpds2001.pdf) `Queued`

@@ -136,6 +136,10 @@ smoothening over.
 
 ## 06. Taste Isn't Talent
 
+> Real taste comes from seeing a lot of good work over time. The mere exposure 
+effect does something else: it makes your own design feel good just because 
+you have looked at it too long.
+
 ## 07. Creativity Isn't Magic
 
 ## 08. Deadlines Make Your Dumb
