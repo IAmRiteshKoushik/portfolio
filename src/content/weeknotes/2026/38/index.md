@@ -37,7 +37,7 @@ needle to move on this.
 
 Uff, being busy is nice. This was missing from my life.
 
-I am getting through the [Database Internals](https://www.youtube.com/playlist?list=PLhgFs9q2EVg91l17UXoPdzsEhJrokLiMx)  
+I am getting through the [Database Internals](https://www.youtube.com/playlist?list=PLhgFs9q2EVg91l17UXoPdzsEhJrokLiMx)
 playlist fairly well. It's half done and I am liking the progress although I am 
 told that the next half is fairly heavy hitting. I wanna try out a couple of 
 prototypes to solidify everything I am learning. From building small storage 
