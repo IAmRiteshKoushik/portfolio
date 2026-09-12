@@ -28,7 +28,11 @@ well, including but not limited to the Navier-Stokes drama at OpenAI.
 
 Currently, I am wrapping up an authentication system for an `undisclosed` project 
 that has been long due. This would open-up out entire feature list and would 
-allow others to start contributing to the codebase as well. 
+allow others to start contributing to the codebase as well. I got Codex to 
+build me a few prototypes at this point:
+
+- [Orval - Go backend + openapi.yaml + auto-generated TanStackQuery & axios client](https://github.com/IAmRiteshKoushik/nofrills/tree/main/orval-prototype)
+- [Dynamic Color Avatar Rings](https://github.com/IAmRiteshKoushik/nofrills/tree/main/avatar-ring)
 
 Ashwin and I still haven't gotten on a call with Ritwik sir for the infra 
 discussion. This is getting delayed and I am not enjoying it one bit because 
