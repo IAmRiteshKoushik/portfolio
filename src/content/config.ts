@@ -39,6 +39,7 @@ const weeknotes = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
+    image: z.string().optional(),
     draft: z.boolean().optional(),
   }),
 });
@@ -49,6 +50,7 @@ const notes = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
+    image: z.string().optional(),
     draft: z.boolean().optional(),
   }),
 })
