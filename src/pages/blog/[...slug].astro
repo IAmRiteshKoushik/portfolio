@@ -1,7 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
-import Container from "@components/Container.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import { readingTime } from "@lib/utils";
 import BackToPrev from "@components/BackToPrev.astro";
@@ -19,7 +18,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
-const { Content } = await post.render();
+const { Content, headings } = await post.render();
 ---
 
 <PageLayout
@@ -27,31 +26,325 @@ const { Content } = await post.render();
   description={post.data.description}
   image={post.data.image}
 >
-  <Container>
-    <div class="animate">
-      <BackToPrev href="/blog">
-        Back to blog
-      </BackToPrev>
-    </div>
-    <div class="space-y-1 my-10">
-      <div class="animate flex items-center gap-1.5">
-        <div class="font-base text-sm">
-          <FormattedDate date={post.data.date} />
+  <div class="blog-layout">
+    <div class="blog-column">
+      <div class="animate">
+        <BackToPrev href="/blog">
+          Back to blog
+        </BackToPrev>
+      </div>
+      <div class="space-y-1 my-10">
+        <div class="animate flex items-center gap-1.5">
+          <div class="font-base text-sm">
+            <FormattedDate date={post.data.date} />
+          </div>
+          &bull;
+          <div class="font-base text-sm">
+            {readingTime(post.body)}
+          </div>
         </div>
-        &bull;
-        <div class="font-base text-sm">
-          {readingTime(post.body)}
+        <div class="animate text-2xl font-semibold text-black dark:text-white">
+          {post.data.title}
         </div>
       </div>
-      <div class="animate text-2xl font-semibold text-black dark:text-white">
-        {post.data.title}
+      {headings.length > 0 && (
+        <details class="mobile-toc animate" data-mobile-toc>
+          <summary>On this page</summary>
+          <nav aria-label="Table of contents">
+            <ol class="toc-list">
+              {headings.map((heading) => (
+                <li>
+                  <a
+                    class="toc-link"
+                    data-depth={heading.depth}
+                    data-toc-link
+                    href={`#${heading.slug}`}
+                  >
+                    {heading.text}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        </details>
+      )}
+      <article class="animate" data-blog-content>
+        <Content />
+      </article>
+      <div class="animate">
+        <Comments />
       </div>
     </div>
-    <article class="animate">
-      <Content />
-    </article>
-    <div class="animate">
-      <Comments />
-    </div>
-  </Container>
+
+    {headings.length > 0 && (
+      <aside class="desktop-toc animate">
+        <nav class="toc-sticky" aria-label="Table of contents">
+          <p class="toc-title">On this page</p>
+          <ol class="toc-list">
+            {headings.map((heading) => (
+              <li>
+                <a
+                  class="toc-link"
+                  data-depth={heading.depth}
+                  data-toc-link
+                  href={`#${heading.slug}`}
+                >
+                  {heading.text}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      </aside>
+    )}
+  </div>
 </PageLayout>
+
+<script>
+  let stopTracking: (() => void) | undefined;
+
+  function trackTableOfContents() {
+    stopTracking?.();
+
+    const links = Array.from(
+      document.querySelectorAll<HTMLAnchorElement>("[data-toc-link]"),
+    );
+
+    if (links.length === 0) return;
+
+    const headings = Array.from(
+      new Map(
+        links
+          .map((link) => {
+            const id = decodeURIComponent(link.hash.slice(1));
+            return [id, document.getElementById(id)] as const;
+          })
+          .filter((entry): entry is readonly [string, HTMLElement] => Boolean(entry[1])),
+      ).values(),
+    );
+
+    if (headings.length === 0) return;
+
+    const controller = new AbortController();
+    let frame = 0;
+
+    function setCurrent(id: string) {
+      links.forEach((link) => {
+        const current = decodeURIComponent(link.hash.slice(1)) === id;
+        link.classList.toggle("is-active", current);
+
+        if (current) {
+          link.setAttribute("aria-current", "location");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    }
+
+    function updateCurrent() {
+      frame = 0;
+      const marker = Math.min(160, window.innerHeight * 0.25);
+      let current = headings[0].id;
+
+      for (const heading of headings) {
+        if (heading.getBoundingClientRect().top > marker) break;
+        current = heading.id;
+      }
+
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+        current = headings.at(-1)?.id ?? current;
+      }
+
+      setCurrent(current);
+    }
+
+    function requestUpdate() {
+      if (frame === 0) frame = window.requestAnimationFrame(updateCurrent);
+    }
+
+    window.addEventListener("scroll", requestUpdate, {
+      passive: true,
+      signal: controller.signal,
+    });
+    window.addEventListener("resize", requestUpdate, {
+      passive: true,
+      signal: controller.signal,
+    });
+
+    updateCurrent();
+    stopTracking = () => {
+      controller.abort();
+      if (frame !== 0) window.cancelAnimationFrame(frame);
+    };
+  }
+
+  trackTableOfContents();
+  document.addEventListener("astro:page-load", trackTableOfContents);
+</script>
+
+<style>
+  .blog-layout {
+    --toc-active: #9a3514;
+    display: block;
+  }
+
+  :global(html.dark) .blog-layout {
+    --toc-active: var(--accent-text);
+  }
+
+  .blog-column {
+    width: 100%;
+    max-width: 48rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+    min-width: 0;
+  }
+
+  .desktop-toc {
+    display: none;
+  }
+
+  .mobile-toc {
+    margin-block: -0.5rem 2rem;
+    border-block: 1px solid var(--line);
+  }
+
+  .mobile-toc summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 0.75rem;
+    color: var(--text);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .mobile-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-toc summary::after {
+    content: "+";
+    color: var(--muted);
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+
+  .mobile-toc[open] summary::after {
+    content: "−";
+  }
+
+  .mobile-toc nav {
+    padding-bottom: 0.875rem;
+  }
+
+  .toc-title {
+    margin: 0 0 0.75rem;
+    color: var(--text);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .toc-list {
+    display: grid;
+    gap: 0.125rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .toc-link {
+    display: block;
+    padding: 0.35rem 0.625rem;
+    border-left: 2px solid transparent;
+    color: var(--muted);
+    font-size: 0.8125rem;
+    line-height: 1.35;
+    text-decoration: none;
+    transition:
+      border-color 150ms ease,
+      color 150ms ease,
+      background-color 150ms ease;
+  }
+
+  .toc-link[data-depth="2"] {
+    padding-left: 1.25rem;
+  }
+
+  .toc-link[data-depth="3"] {
+    padding-left: 1.875rem;
+  }
+
+  .toc-link[data-depth="4"] {
+    padding-left: 2.5rem;
+  }
+
+  .toc-link[data-depth="5"] {
+    padding-left: 3.125rem;
+  }
+
+  .toc-link[data-depth="6"] {
+    padding-left: 3.75rem;
+  }
+
+  .toc-link:hover {
+    color: var(--text);
+  }
+
+  .toc-link.is-active {
+    border-left-color: var(--toc-active);
+    background: color-mix(in srgb, var(--toc-active) 8%, transparent);
+    color: var(--toc-active);
+  }
+
+  .toc-link:focus-visible,
+  .mobile-toc summary:focus-visible {
+    border-radius: 0.25rem;
+    outline: 2px solid var(--toc-active);
+    outline-offset: 2px;
+  }
+
+  :global(article [id]) {
+    scroll-margin-top: 6.5rem;
+  }
+
+  @media (min-width: 80rem) {
+    .blog-layout {
+      display: grid;
+      grid-template-columns: minmax(1.25rem, 1fr) minmax(0, 48rem) minmax(1.25rem, 1fr);
+    }
+
+    .blog-column {
+      grid-column: 2;
+      width: auto;
+      margin-inline: 0;
+    }
+
+    .mobile-toc {
+      display: none;
+    }
+
+    .desktop-toc {
+      display: block;
+      grid-column: 3;
+      min-width: 0;
+      margin-left: 1.5rem;
+      margin-right: 1.25rem;
+    }
+
+    .toc-sticky {
+      position: sticky;
+      top: 6.5rem;
+      width: min(14rem, 100%);
+      max-height: calc(100vh - 8rem);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding-right: 0.5rem;
+      scrollbar-width: thin;
+    }
+  }
+</style>
