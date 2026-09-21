@@ -1,7 +1,7 @@
 ---
-title: "Weeknotes: Week #38 - 2026"
+title: "Weeknotes: Week #38.1 - 2026"
 description: "Auth speedrun, Bitcask and more John Dicken videos"
-date: "September 18, 2026"
+date: "September 14, 2026"
 draft: false
 ---
 
