@@ -112,28 +112,28 @@ const work = await Promise.all(
       </section>
 
       <!-- Work -->
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="home-section-heading text-black dark:text-white">
-            Work Exp.
-          </h5>
-        </div>
-        <ul class="flex flex-col space-y-4">
-          {work.map(entry => (
-            <li>
-              <div class="text-sm opacity-75">
-                {dateRange(entry.data.dateStart, entry.data.dateEnd)}
-              </div>
-              <div class="font-semibold text-black dark:text-white">
-                {entry.data.company}
-              </div>
-              <div class="text-sm opacity-75">
-                {entry.data.role}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <!-- <section class="animate space-y-6"> -->
+      <!--   <div class="flex flex-wrap gap-y-2 items-center justify-between"> -->
+      <!--     <h5 class="home-section-heading text-black dark:text-white"> -->
+      <!--       Work Exp. -->
+      <!--     </h5> -->
+      <!--   </div> -->
+      <!--   <ul class="flex flex-col space-y-4"> -->
+      <!--     {work.map(entry => ( -->
+      <!--       <li> -->
+      <!--         <div class="text-sm opacity-75"> -->
+      <!--           {dateRange(entry.data.dateStart, entry.data.dateEnd)} -->
+      <!--         </div> -->
+      <!--         <div class="font-semibold text-black dark:text-white"> -->
+      <!--           {entry.data.company} -->
+      <!--         </div> -->
+      <!--         <div class="text-sm opacity-75"> -->
+      <!--           {entry.data.role} -->
+      <!--         </div> -->
+      <!--       </li> -->
+      <!--     ))} -->
+      <!--   </ul> -->
+      <!-- </section> -->
 
       <section class="animate space-y-4">
         <h5 class="home-section-heading text-black dark:text-white">
