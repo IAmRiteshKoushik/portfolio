@@ -54,4 +54,7 @@ anyways so this is a currently a better getaway.
 lesser and saving up / investing a lot more. Quite an interesting direction to 
 be honest.
 
-- My sleep schedule is recovering better now.
+- My sleep schedule is recovering now which is a positive sign. I think life 
+got kinda messy where I was struggling to sketch, sculpt, learn, read, craft and 
+play all at the same time. A better sleep and a good bath has always been 
+better anchors to a lot of problems.
