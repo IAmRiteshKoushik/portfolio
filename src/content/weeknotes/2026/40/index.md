@@ -1,6 +1,6 @@
 ---
 title: "Weeknotes: Week #40 - 2026"
-description: "I started fiddling with Unity !?"
+description: "Unity, blender, origami and anatomy"
 date: "October 2, 2026"
 draft: false
 ---
