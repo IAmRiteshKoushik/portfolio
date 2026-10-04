@@ -1,5 +1,5 @@
 ---
-title: "Note #6: Rust Crates for Everyday Use"
+title: "Note #7: Rust Crates for Everyday Use"
 description: "Crates you reach for any decent sized project"
 date: "Oct 4, 2026"
 draft: false
