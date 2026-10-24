@@ -2,7 +2,7 @@
 title: "Shipping Nothing In The Age of AI"
 description: "A reflection on AI, output obsession, and what meaningful shipping still means."
 date: "April 27 2026"
-draft: false
+draft: true
 ---
 
 # We are all AI-pilled
