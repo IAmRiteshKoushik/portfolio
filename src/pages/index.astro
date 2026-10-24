@@ -11,10 +11,10 @@ const post = (await getCollection("blog"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0,SITE.NUM_POSTS_ON_HOMEPAGE);
 
-const weeknotes = (await getCollection("weeknotes"))
-  .filter(post => !post.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0,SITE.NUM_WEEKNOTES_ON_HOMEPAGE);
+// const weeknotes = (await getCollection("weeknotes"))
+//   .filter(post => !post.data.draft)
+//   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+//   .slice(0,SITE.NUM_WEEKNOTES_ON_HOMEPAGE);
 
 const notes = (await getCollection("notes"))
   .filter(post => !post.data.draft)
@@ -91,25 +91,25 @@ const work = await Promise.all(
       </section>
 
       <!-- Weeknotes -->
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="home-section-heading text-black dark:text-white">
-            Weeknotes.
-          </h5>
-          <Link href="/weeknotes">
-            See all
-          </Link>
-        </div>
-        <ul class="list-disc pl-5 space-y-2">
-          {weeknotes.map(post => (
-            <li>
-              <Link href={`/weeknotes/${post.slug}/`}>
-                {post.data.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <!-- <section class="animate space-y-6"> -->
+      <!--   <div class="flex flex-wrap gap-y-2 items-center justify-between"> -->
+      <!--     <h5 class="home-section-heading text-black dark:text-white"> -->
+      <!--       Weeknotes. -->
+      <!--     </h5> -->
+      <!--     <Link href="/weeknotes"> -->
+      <!--       See all -->
+      <!--     </Link> -->
+      <!--   </div> -->
+      <!--   <ul class="list-disc pl-5 space-y-2"> -->
+      <!--     {weeknotes.map(post => ( -->
+      <!--       <li> -->
+      <!--         <Link href={`/weeknotes/${post.slug}/`}> -->
+      <!--           {post.data.title} -->
+      <!--         </Link> -->
+      <!--       </li> -->
+      <!--     ))} -->
+      <!--   </ul> -->
+      <!-- </section> -->
 
       <!-- Work -->
       <!-- <section class="animate space-y-6"> -->
